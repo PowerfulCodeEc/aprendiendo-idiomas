@@ -1,24 +1,324 @@
 
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Curso de Kichwa (Quichua)</title>
-<style>body{margin:0;background:#0b0f14;color:#eaf2ff;font:16px/1.5 system-ui}a{text-decoration:none;color:#6fe3ff}.container{max-width:1100px;margin:auto;padding:20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid{grid-template-columns:1fr}}.card{background:#111722;border-radius:16px;padding:16px}</style>
-</head><body>
-  <nav class="container">../index.html← Volver</a></nav>
-  <main class="container">
-    <h1>Curso de Kichwa (Quichua)</h1>
-    <h2 id="lecciones">Lecciones</h2>
-    <div class="grid">
-      <div class="card"><h3>Lección 1</h3><p>Saludos y presentaciones.</p></div>
-      <div class="card"><h3>Lección 2</h3><p>Partículas básicas.</p></div>
-      <div class="card"><h3>Lección 3</h3><p>Números y tiempo.</p></div>
-    </div>
+<html lang="es">
+<head>
+  <!-- ========= METADATOS BÁSICOS ========= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprendiendo Idiomas — Curso de Kichwa (Quichua) Imbabura | Introducción</title>
+  <meta name="description" content="Introducción al curso de Kichwa (Quichua) de Imbabura: verbos regulares, partículas, variación dialectal y consejos prácticos. Menú de próximas lecciones y video de YouTube." />
+  <meta name="author" content="Aprendiendo Idiomas" />
 
-    <h2 id="material">Material imprimible</h2>
-    <div class="grid">
-      <a class="card" href="../assets/pdf/kichwa/guia-rapida-kich)</a>
-      <a class="card" href="../assets/pdf/kichwa/hojas-practica-kicha (PDF)</a>
-      <a class="card" href="../assets/pdf/kichwa/tarjetas-vocabulario-kocabulario (PDF)</a>
+  <!-- ========= OPEN GRAPH (para compartir) ========= -->
+  <meta property="og:title" content="Curso de Kichwa (Quichua) Imbabura — Introducción" />
+  <meta property="og:description" content="Aprende Kichwa (Quichua) de Imbabura con un enfoque práctico. Menú de lecciones y video." />
+  <meta property="og:type" content="website" />
+  <!-- Reemplaza estos dos valores por tu dominio de GitHub Pages si quieres que se vea bien al compartir -->
+  <meta property="og:image" content="https://tu-dominio/og-image.jpg" />
+  <meta property="og:url" content="https://tu-dominio/" />
+
+  <!-- ========= ESTILOS MINIMALISTAS ========= -->
+  <style>
+    :root {
+      --bg: #0f1216;
+      --bg-soft: #151a21;
+      --text: #e9edf3;
+      --muted: #aeb8c5;
+      --primary: #4ad2a7;
+      --accent: #7aa6ff;
+      --card: #11151b;
+      --border: #232b36;
+      --shadow: 0 10px 30px rgba(0,0,0,0.3);
+      --radius: 14px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fc;
+        --bg-soft: #ffffff;
+        --text: #121417;
+        --muted: #566173;
+        --card: #ffffff;
+        --border: #e6ecf5;
+        --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      }
+    }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg); color: var(--text);
+      font-family: var(--font); line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 700; letter-spacing: 0.2px;
+    }
+    .brand .logo {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: var(--shadow);
+    }
+    nav { margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap; }
+    nav a {
+      color: var(--text); text-decoration: none;
+      padding: 8px 12px; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 0.95rem;
+    }
+    nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero {
+      margin: 28px 0; padding: 28px;
+      border: 1px solid var(--border); background: var(--bg-soft);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.2rem); }
+    .hero p { color: var(--muted); margin: 0; }
+
+    section {
+      margin: 28px 0; padding: 24px;
+      border: 1px solid var(--border); background: var(--card);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    section h2 { margin-top: 0; font-size: clamp(1.3rem, 3vw, 1.6rem); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 680px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 960px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      padding: 18px; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--bg-soft);
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .card a {
+      display: inline-block; margin-top: 10px; text-decoration: none;
+      color: var(--primary);
+      border-bottom: 1px dashed color-mix(in oklab, var(--primary) 70%, transparent);
+    }
+    .card a:hover { color: var(--accent); }
+
+    .callout {
+      border-left: 4px solid var(--primary);
+      padding: 12px 14px;
+      background: color-mix(in oklab, var(--card) 80%, transparent);
+      border-radius: 10px; color: var(--text);
+    }
+
+    details {
+      border: 1px dashed var(--border);
+      padding: 12px 14px; border-radius: 10px;
+      background: color-mix(in oklab, var(--card) 80%, transparent);
+    }
+    details > summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+
+    .video {
+      aspect-ratio: 16 / 9; width: 100%;
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; background: #000;
+    }
+    .video iframe { width: 100%; height: 100%; border: 0; }
+
+    footer {
+      margin-top: 32px; padding: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted); text-align: center;
+    }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <!-- ========= ENCABEZADO / NAV ========= -->
+  <header>
+    <div class="container">
+      <div class="brand" aria-label="Aprendiendo Idiomas">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Aprendiendo Idiomas</span>
+      </div>
+      <nav aria-label="Navegación principal">
+        #introduccionIntroducción</a>
+        #que-aprenderasQué aprenderás</a>
+        #menu-leccionesMenú de lecciones</a>
+        #recursosRecursos y tips</a>
+        #videoVideo</a>
+      </nav>
     </div>
-  </main>
-</body></html>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <div class="container">
+    <section class="hero" id="home">
+      <h1>Curso de Kichwa (Quichua) — Introducción</h1>
+      <p>Dialecto de Imbabura · Enfoque práctico · Aprendizaje claro y accesible</p>
+    </section>
+
+    <!-- ========= INTRODUCCIÓN ========= -->
+   
+<section id="introduccion" aria-labelledby="intro-title">
+  <h2 id="intro-title">Bienvenida e Introducción</h2>
+
+  <p>Este sitio es el punto de partida para aprender el idioma <strong>Kichwa (Quichua)</strong> de Ecuador, con un enfoque claro y práctico en <strong>el dialecto de Imbabura</strong>, hablado en la parte norte del país (como en la ciudad de Otavalo y sus alrededores).</p>
+
+  <p>El Kichwa (Quichua) y su variante, el <strong>Quechua</strong>, son lenguas originarias de Sudamérica. En la actualidad, en <strong>Ecuador, Perú y Bolivia</strong> el idioma principal es el español, pero <strong>gran parte de la población todavía se comunica en su lengua nativa</strong>.</p>
+
+  <div class="callout">
+    <strong>Idea clave:</strong> Aprender otro idioma nos abre a <em>otro mundo</em>, donde podemos <strong>romper barreras culturales</strong> y conectar mejor con las personas.
+  </div>
+
+  <h3>Verbos regulares en Kichwa</h3>
+  <p>Una característica interesante del Kichwa es que <strong>los verbos son regulares</strong>. A diferencia de otros idiomas, <strong>todos los verbos siguen las mismas reglas de conjugación</strong>. La <em>raíz</em> del verbo <strong>no cambia</strong>; conociendo las <em>terminaciones</em>, podrás conjugar <strong>cualquier verbo</strong> sin memorizar largas listas de irregulares.</p>
+
+  <h3>Las “partículas” (sufijos/morfemas)</h3>
+  <p>La parte más desafiante (¡pero alcanzable!) son las <strong>partículas</strong>. Son combinaciones de letras que se añaden a una palabra para <strong>resaltar su significado</strong> o <strong>dar sentido</strong> a la oración. En español se reconocen como <em>sufijos</em> o <em>morfemas</em>. Por ejemplo, añadir “-s” para hacer plural (carro → carros).</p>
+
+  <p>Por eso, ayuda mucho saber un poco de <strong>gramática del español</strong>: te dará un <strong>punto de comparación</strong> útil al aprender Kichwa.</p>
+
+  <h3>Variación según la región</h3>
+  <p>El Kichwa <strong>no es uniforme</strong>: el vocabulario, la pronunciación e incluso aspectos de la gramática <strong>cambian según la región</strong>. Por ejemplo, en Imbabura se dice “<strong>alilla</strong>” y en Riobamba “<strong>allilla</strong>”. Incluso <strong>dentro de Imbabura</strong> hay variación: algunos dicen “<strong>uchila</strong>” y otros “<strong>uchilla</strong>”. <strong>Ambas formas son correctas</strong>.</p>
+
+  <div class="callout">
+    <strong>Consejo:</strong> Sé <em>adaptable</em> al idioma. Escucha con atención cómo lo hablan en tu comunidad y <strong>imita</strong> esas formas. Así hablarás más <strong>natural</strong> y te entenderán con mayor facilidad.
+  </div>
+
+  <p>Este curso incluye <strong>lecciones escritas</strong>, <strong>ejercicios</strong> y <strong>material audiovisual</strong> para reforzar lo aprendido. Si prefieres el formato video, encontrarás contenidos complementarios en el canal <em>Aprendiendo Idiomas</em>.</p>
+
+  <p>¡Disfruta mucho aprendiendo este idioma!</p>
+</section>
+
+
+    <!-- ========= QUÉ APRENDERÁS ========= -->
+    <section id="que-aprenderas" aria-labelledby="learn-title">
+      <h2 id="learn-title">Qué aprenderás en este curso</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Conjugación simple y regular</h3>
+          <p>Cómo reconocer la raíz y aplicar terminaciones para todas las personas.</p>
+        </div>
+        <div class="card">
+          <h3>Partículas clave</h3>
+          <p>Uso práctico de sufijos para dar sentido, énfasis y matices a tus frases.</p>
+        </div>
+        <div class="card">
+          <h3>Pronunciación y variación</h3>
+          <p>Diferencias regionales y cómo adaptarte sin perder claridad.</p>
+        </div>
+        <div class="card">
+          <h3>Gramática comparada</h3>
+          <p>Puentes con el español para acelerar tu comprensión.</p>
+        </div>
+        <div class="card">
+          <h3>Vocabulario útil</h3>
+          <p>Palabras y frases de uso cotidiano para comunicarte desde el día uno.</p>
+        </div>
+        <div class="card">
+          <h3>Estrategias de estudio</h3>
+          <p>Rutinas, escucha activa y repetición consciente para progresar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= MENÚ DE LECCIONES ========= -->
+    <section id="menu-lecciones" aria-labelledby="menu-title">
+      <h2 id="menu-title">Menú de próximas lecciones</h2>
+      <p>Estas tarjetas son enlaces de ejemplo. Cuando publiques cada lección en GitHub (por ejemplo <code>leccion-1.html</code>), reemplaza el <code>href</code> con la URL real.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Lección 1 — Saludos y presentaciones</h3>
+          <p>Fórmulas básicas para iniciar conversaciones.</p>
+          #Abrir lección</a>
+        </div>
+        <div class="card">
+          <h3>Lección 2 — Pronunciación y ritmo</h3>
+          <p>Sonidos característicos y práctica guiada.</p>
+          #Abrir lección</a>
+        </div>
+        <div class="card">
+          <h3>Lección 3 — Verbos regulares: estructura</h3>
+          <p>Raíz y terminaciones; patrón universal.</p>
+          #Abrir lección</a>
+        </div>
+        <div class="card">
+          <h3>Lección 4 — Partículas esenciales</h3>
+          <p>Cómo añadir significado y función a las palabras.</p>
+          #Abrir lección</a>
+        </div>
+        <div class="card">
+          <h3>Lección 5 — Vocabulario cotidiano I</h3>
+          <p>Familia, casa, comida: palabras de uso diario.</p>
+          #Abrir lección</a>
+        </div>
+        <div class="card">
+          <h3>Lección 6 — Variación dialectal</h3>
+          <p>Adaptación práctica según la región.</p>
+          #Abrir lección</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= RECURSOS PRÁCTICOS ========= -->
+    <section id="recursos" aria-labelledby="recursos-title">
+      <h2 id="recursos-title">Recursos y tips</h2>
+
+      <details>
+        <summary>Cómo estudiar (rutina rápida)</summary>
+        <ul>
+          <li><strong>10 minutos diarios</strong> de escucha y repetición.</li>
+          <li>Graba tu voz y compárala; ajusta pronunciación.</li>
+          <li>Haz <em>flashcards</em> con raíces verbales y terminaciones.</li>
+          <li>Practica con hablantes locales cuando sea posible.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Glosario mini (conceptos de esta introducción)</summary>
+        <ul>
+          <li><strong>Raíz verbal:</strong> Parte del verbo que no cambia.</li>
+          <li><strong>Terminaciones:</strong> Letras que se añaden para conjugar.</li>
+          <li><strong>Partículas:</strong> Sufijos/morfemas que añaden significado.</li>
+          <li><strong>Variación:</strong> Cambios en vocabulario/pronunciación entre regiones.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- ========= VIDEO DE YOUTUBE ========= -->
+    <section id="video" aria-labelledby="video-title">
+      <h2 id="video-title">Video de la introducción</h2>
+      
+      <div class="video" role="figure" aria-label="Video de YouTube de la introducción">
+        <!-- Opción estándar -->
+        <iframe
+          src="https://www.youtube.com/embed/mcN2N7NOD6s"
+          title="Introducción al curso de Kichwa (Quichua)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+         bel="Video de YouTube (modo privacidad)">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/mcN2N7NOD6s"
+          title="Introducción al curso de Kichwa (Quichua)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+>
+      </noscript>
+    </section>
+  </div>
+
+  <!-- ========= PIE DE PÁGINA ========= -->
+  <footer>
+    <small>© <span id="y"></span> Aprendiendo Idiomas · Curso de Kichwa (Quichua) — Imbabura</small>
+  </footer>
+
+  <!-- ========= SCRIPT PEQUEÑO PARA EL AÑO ========= -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+        </html>
