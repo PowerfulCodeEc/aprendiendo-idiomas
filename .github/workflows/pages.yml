@@ -1,0 +1,41 @@
+
+# Nombre que verás en la pestaña "Actions"
+name: Deploy static site to GitHub Pages
+
+# 1) ¿Cuándo se ejecuta?
+on:
+  push:                # cada vez que hagas push
+    branches: [ main ] # ...a la rama main
+  workflow_dispatch:   # también puedes ejecutarlo manualmente desde Actions
+
+# 2) Permisos especiales que necesita para publicar en Pages
+permissions:
+  contents: read  # leer el repo
+  pages: write    # publicar en GitHub Pages
+  id-token: write # autenticarse de forma segura
+
+# 3) Definimos los trabajos (jobs)
+jobs:
+  # 3a) Job "build": empaqueta la carpeta del sitio como artefacto
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4   # descarga tu repo en el runner
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 👇 Esto es CLAVE: la carpeta que quieres publicar
+          # En tu estructura actual es "portal_idiomas"
+          path: portal_idiomas
+
+  # 3b) Job "deploy": publica ese artefacto en GitHub Pages
+  deploy:
+    needs: build     # espera a que termine "build"
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # entorno reservado por GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }}  # URL resultante (la verás en Actions)
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
