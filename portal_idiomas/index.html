@@ -7,6 +7,195 @@
   <title>Aprendiendo Idiomas | Portal</title>
   <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
   <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111722;
+      --text: #eaf2ff;
+      --muted: #a6b3c4;
+      --brand: #6fe3ff;
+      --brand-2: #9eff80;
+      --accent: #b892ff;
+      --border: #1d2533;
+      --hover: #273144;
+      --red: #ff4d4d;
+    }
+    * { box-sizing: border-box }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; }
+    body { overflow-x: hidden; }
+    a { color: inherit; text-decoration: none }
+    img, iframe { max-width: 100%; display: block }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 18px }
+
+    /* Header */
+    header { position: sticky; top: 0; background: rgba(11,15,20,.85); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); z-index: 50 }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 60px }
+    .logo { display: flex; gap: .6rem; align-items: center; font-weight: 700 }
+    .logo-badge { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg,var(--brand),var(--brand-2)); display: grid; place-items: center; color: #001114; font-weight: 800 }
+    .menu { display: flex; gap: .8rem; flex-wrap: wrap }
+    .menu a { padding: .45rem .7rem; border-radius: 8px; color: var(--muted) }
+    .menu a:hover, .menu a:focus-visible { background: var(--card); color: var(--text); outline: none }
+
+    /* Hero */
+    .hero { padding: 28px 0 4px }
+    .title { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 800; margin: .25rem 0 }
+    .lead { color: var(--muted); max-width: 760px; margin: .2rem 0 0 }
+
+    /* Grid utilitario */
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 20px 0 }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr } }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr } }
+
+    /* Tarjetas (enlaces completos) */
+    .card { background: linear-gradient(180deg,#121826,#0f1520); border: 1px solid var(--border); border-radius: 14px; padding: 16px; display: block; }
+    .card:hover { border-color: var(--hover); box-shadow: 0 8px 22px rgba(0,0,0,.35) }
+    .card:focus-visible { outline: 2px solid var(--brand) }
+    .badge { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--card); margin-bottom: .4rem; font-size: .85rem }
+    .card h3 { margin: .15rem 0 .3rem; font-size: 1.06rem }
+    .card p { color: var(--muted); margin: 0 }
+
+    /* Sección YouTube */
+    .yt-hero { margin: 24px 0; padding: 18px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(180deg,#121826,#0f1520); }
+    .yt-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 .4rem; font-size: clamp(1.2rem, 2.6vw, 1.6rem); font-weight: 800 }
+    .yt-title .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 8px var(--red) }
+    .yt-lead { color: var(--muted); margin: .2rem 0 .8rem; max-width: 760px }
+    .yt-actions { display: flex; gap: .6rem; flex-wrap: wrap }
+    .cta { display: inline-block; padding: .68rem .95rem; border-radius: 12px; font-weight: 800; color: #001114; background: linear-gradient(135deg,var(--brand),var(--accent)); }
+    .cta:hover { filter: brightness(1.08) }
+
+    .embed { aspect-ratio: 16/9; background: #0d1320; border: 1px solid var(--border); border-radius: 12px; overflow: hidden }
+
+    /* Secciones */
+    section h2 { font-size: 1.2rem; margin: 8px 0 }
+    footer { border-top: 1px solid var(--border); padding: 18px 0; color: var(--muted); margin-top: 24px }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav">
+      <div class="logo">
+        <span class="logo-badge">AI</span>
+        <span>Aprendiendo Idiomas</span>
+      </div>
+      <div class="menu">
+        #cursosCursos</a>
+        #recursosRecursos</a>
+        #como-funcionaCómo funciona</a>
+        #youtubeYouTube</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">Tu portal para aprender Kichwa, Español e Inglés</h1>
+      <p class="lead">Selecciona un curso para comenzar. Encontrarás videos, material imprimible en PDF y ejercicios prácticos.</p>
+    </section>
+
+    <!-- Selector de idioma -->
+    <section id="cursos" aria-label="Cursos disponibles">
+      <div class="grid">
+        <!-- Kichwa -->
+        ./kichwa/index.html
+          <div class="badge" aria-hidden="true">EC</div>
+          <h3>Kichwa (Quichua)</h3>
+          <p>Curso desde cero con enfoque práctico y respetuoso del Kichwa de Imbabura.</p>
+        </a>
+
+        <!-- Español -->
+        ./espanol/index.html
+          <div class="badge" aria-hidden="true">ES</div>
+          <h3>Español</h3>
+          <p>Español latino para principiantes con ejercicios y material imprimible.</p>
+        </a>
+
+        <!-- Inglés -->
+        ./ingles/index.html
+          <div class="badge" aria-hidden="true">GB</div>
+          <h3>Inglés</h3>
+          <p>Fundamentos conversacionales y frases útiles para viajar.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="recursos">
+      <h2>Recursos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🎬 Videos</h3>
+          <p>Integra tus clases desde YouTube con subtítulos.</p>
+        </div>
+        <div class="card">
+          <h3>🖨️ Material imprimible (PDF)</h3>
+          <p>Guías rápidas, hojas de práctica y tarjetas de vocabulario.</p>
+        </div>
+        <div class="card">
+          <h3>🧩 Ejercicios</h3>
+          <p>Cuestionarios y retos semanales para consolidar el aprendizaje.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <h2>Cómo funciona</h2>
+      <div class="grid">
+        <div class="card"><h3>1. Elige un idioma</h3><p>Entra al curso que te interese (Kichwa, Español o Inglés).</p></div>
+        <div class="card"><h3>2. Sigue las lecciones</h3><p>Mira los videos y descarga el material imprimible.</p></div>
+        <div class="card"><h3>3. Practica</h3><p>Realiza los ejercicios para medir tu progreso.</p></div>
+      </div>
+    </section>
+
+    <!-- YouTube -->
+    <section id="youtube" aria-label="Tu canal en YouTube">
+      <div class="yt-hero">
+        <h2 class="yt-title"><span class="dot" aria-hidden="true"></span> Tu canal en YouTube</h2>
+        <p class="yt-lead">
+          Visita el canal <strong>@aprendiendoidiomas</strong> para ver clases completas, shorts y prácticas guiadas.
+          ¡Suscríbete y activa la campanita para apoyar el proyecto! 🔔
+        </p>
+        <div class="yt-actions">
+          <a class="cta" href="https://www.youtube.com/@aprendiendoidiomas?sub       Ver el canal y suscribirse →
+          </a>
+          <a class="card" href="https://www.youtube.com/@aprendiendoidiomas/playlists" target="_blank" rel="noopener" aria-label="Ver listas de reproducciónurso.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Espacios para embeds (reemplaza VIDEO_ID) -->
+      <div class="grid" style="margin-top: 12px;">
+        <div class="card">
+          <h3>Video destacado</h3>
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video destacado" allow="accelerometer; autoplay          <h3>Clase de Kichwa</h3>
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/VIDEO          </div>
+        </div>
+        <div class="card">
+          <h3>Clase de Español/Inglés</h3>
+          <div class="embed">
+            https://www.youtube.com/embed/VIDEO_ID</iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Aprendiendo Idiomas — Portal educativo minimalista.</div>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aprendiendo Idiomas | Portal</title>
+  <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
+  <style>
     /* ===== Reset y base ===== */
     :root {
       --bg: #0b0f14;
