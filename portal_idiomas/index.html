@@ -7,6 +7,7 @@
   <title>Aprendiendo Idiomas | Portal</title>
   <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
   <style>
+    /* ===== Reset y base ===== */
     :root {
       --bg: #0b0f14;
       --card: #111722;
@@ -21,52 +22,55 @@
     }
     * { box-sizing: border-box }
     html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; }
+    body { overflow-x: hidden; } /* evita desplazamiento horizontal accidental */
     a { color: inherit; text-decoration: none }
+    img, iframe { max-width: 100%; display: block } /* contención de medios */
+
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px }
-    header { position: sticky; top: 0; background: rgba(11,15,20,.8); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 50 }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px }
+
+    /* ===== Header ===== */
+    header { position: sticky; top: 0; background: rgba(11,15,20,.85); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); z-index: 50 }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 60px }
     .logo { display: flex; gap: .6rem; align-items: center; font-weight: 700 }
     .logo-badge { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg,var(--brand),var(--brand-2)); display: grid; place-items: center; color: #001114; font-weight: 800 }
-    .menu { display: flex; gap: 1rem }
-    .menu a { padding: .5rem .75rem; border-radius: 8px; color: var(--muted) }
-    .menu a:focus-visible { outline: 2px solid var(--brand) }
-    .menu a:hover { background: var(--card); color: var(--text) }
+    .menu { display: flex; gap: .75rem; flex-wrap: wrap }
+    .menu a { padding: .45rem .7rem; border-radius: 8px; color: var(--muted) }
+    .menu a:hover, .menu a:focus-visible { background: var(--card); color: var(--text); outline: none }
 
-    .hero { padding: 42px 0 10px }
-    .title { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; margin: .25rem 0 }
-    .lead { color: var(--muted); max-width: 780px }
+    /* ===== Hero ===== */
+    .hero { padding: 32px 0 8px }
+    .title { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; margin: .25rem 0 } /* tamaño más contenido */
+    .lead { color: var(--muted); max-width: 780px; margin: .2rem 0 0 }
 
-    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 24px 0 }
+    /* ===== Grid utilitario ===== */
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 22px 0 }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr } }
     @media (max-width: 600px) { .grid { grid-template-columns: 1fr } }
 
-    .card { background: linear-gradient(180deg,#121826,#0f1520); border: 1px solid var(--border); border-radius: 16px; padding: 18px; display: block }
-    .card:hover { border-color: var(--hover); box-shadow: 0 10px 30px rgba(0,0,0,.35) }
+    /* ===== Tarjetas ===== */
+    .card { background: linear-gradient(180deg,#121826,#0f1520); border: 1px solid var(--border); border-radius: 14px; padding: 16px; display: block; }
+    .card:hover { border-color: var(--hover); box-shadow: 0 8px 22px rgba(0,0,0,.35) }
     .card:focus-visible { outline: 2px solid var(--brand) }
-    .badge { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: var(--card); margin-bottom: .5rem }
-    .card h3 { margin: .2rem 0 .35rem }
+    .badge { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--card); margin-bottom: .4rem }
+    .card h3 { margin: .15rem 0 .3rem; font-size: 1.05rem }
     .card p { color: var(--muted); margin: 0 }
 
-    /* Botón CTA genérico */
-    .cta { display: inline-block; padding: .75rem 1rem; border-radius: 12px; font-weight: 800; color: #001114; background: linear-gradient(135deg,var(--brand),var(--accent)); }
-    .cta:hover { filter: brightness(1.1) }
-    .cta:focus-visible { outline: 2px solid #fff }
+    /* ===== Botón CTA ===== */
+    .cta { display: inline-block; padding: .7rem 1rem; border-radius: 12px; font-weight: 800; color: #001114; background: linear-gradient(135deg,var(--brand),var(--accent)); }
+    .cta:hover { filter: brightness(1.08) }
 
-    /* Sección YouTube */
-    .yt-hero { margin: 32px 0; padding: 22px; border-radius: 16px; border: 1px solid var(--border);
-               background: radial-gradient(600px 300px at 15% 0%, rgba(255,77,77,.25) 0%, transparent 70%),
-                           radial-gradient(600px 300px at 85% 0%, rgba(184,146,255,.18) 0%, transparent 70%),
-                           linear-gradient(180deg,#121826,#0f1520);
-    }
-    .yt-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 .5rem; font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 800 }
-    .yt-title .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); box-shadow: 0 0 10px var(--red) }
-    .yt-lead { color: var(--muted); margin: .2rem 0 1rem; max-width: 780px }
-    .yt-actions { display: flex; gap: .75rem; flex-wrap: wrap }
+    /* ===== Sección YouTube ===== */
+    .yt-hero { margin: 26px 0; padding: 18px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(180deg,#121826,#0f1520); }
+    .yt-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 .4rem; font-size: clamp(1.2rem, 2.6vw, 1.6rem); font-weight: 800 }
+    .yt-title .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 8px var(--red) }
+    .yt-lead { color: var(--muted); margin: .2rem 0 .8rem; max-width: 780px }
+    .yt-actions { display: flex; gap: .6rem; flex-wrap: wrap }
 
     .embed { aspect-ratio: 16/9; background: #0d1320; border: 1px solid var(--border); border-radius: 12px; overflow: hidden }
-    .embed iframe { width: 100%; height: 100%; border: 0 }
 
-    footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); margin-top: 24px }
+    /* ===== Secciones ===== */
+    section h2 { font-size: 1.2rem; margin: 8px 0 }
+    footer { border-top: 1px solid var(--border); padding: 18px 0; color: var(--muted); margin-top: 24px }
   </style>
 </head>
 <body>
@@ -78,7 +82,7 @@
       </div>
       <div class="menu">
         #cursosCursos</a>
-        <a href="#recrsos</a>
+        #recursosRecursos</a>
         #como-funcionaCómo funciona</a>
         #youtubeYouTube</a>
       </div>
@@ -91,29 +95,28 @@
       <p class="lead">Selecciona un curso para comenzar. Encontrarás videos, material imprimible en PDF y ejercicios prácticos.</p>
     </section>
 
-    <section id="cursos">
+    <!-- Cursos -->
+    <section id="cursos" aria-label="Cursos disponibles">
       <div class="grid">
-        <!-- Kichwa -->
-        <akichwa/index.html
-          <div class="badge" aria-hidden="true">🇪🇨</div>
+        <a class="card" href          <div class="badge" aria-hidden="true">🇪🇨</div>
           <h3>Kichwa (Quichua)</h3>
           <p>Curso desde cero con enfoque práctico y respetuoso del Kichwa de Imbabura.</p>
         </a>
 
-        <!-- Español -->
-        <a class="card" href="./espanol/index.html"badge" aria-hidden="true">🇪🇸</div>
+        <a class="card" href="./es     <div class="badge" aria-hidden="true">🇪🇸</div>
           <h3>Español</h3>
           <p>Español latino para principiantes con ejercicios y material imprimible.</p>
         </a>
 
-        <!-- Inglés -->
-        <a class="card" href="./ingles/index.html" aria-label="Ir al curso">🇬🇧</div>
+        ./ingles/index.html
+          <div class="badge" aria-hidden="true">🇬🇧</div>
           <h3>Inglés</h3>
           <p>Fundamentos conversacionales y frases útiles para viajar.</p>
         </a>
       </div>
     </section>
 
+    <!-- Recursos -->
     <section id="recursos">
       <h2>Recursos</h2>
       <div class="grid">
@@ -132,6 +135,7 @@
       </div>
     </section>
 
+    <!-- Cómo funciona -->
     <section id="como-funciona">
       <h2>Cómo funciona</h2>
       <div class="grid">
@@ -141,38 +145,36 @@
       </div>
     </section>
 
-    <!-- 🔴 NUEVA SECCIÓN: YouTube -->
-    <section id="youtube">
+    <!-- YouTube -->
+    <section id="youtube" aria-label="Tu canal en YouTube">
       <div class="yt-hero">
         <h2 class="yt-title"><span class="dot" aria-hidden="true"></span> Tu canal en YouTube</h2>
         <p class="yt-lead">
-          Te invito a visitar el canal <strong>@aprendiendoidiomas</strong>, donde publico clases completas,
-          shorts y prácticas guiadas. ¡Apoya el proyecto suscribiéndote y activando la campanita! 🔔
+          Visita el canal <strong>@aprendiendoidiomas</strong> para ver clases completas, shorts y prácticas guiadas.
+          ¡Suscríbete y activa la campanita para apoyar el proyecto! 🔔
         </p>
         <div class="yt-actions">
-          <!-- Botón de suscripción (abre con prompt de suscripción) -->
-          <a class="w.youtube.com/@aprendiendoidiomas?sub_confirmation=1
+          <a class="cta" href="https://www.youtube.com/@aprendiendoidi=1
             Ver el canal y suscribirse →
           </a>
-          <!-- Playlists del canal (opcional) -->
-          <a class="card" href="https://www.youtube.com/@aprendiendoidiomas/playlists" target="_roducción</h3>
+          <a class="card" href="https://www.youtube.com/@aprendiendoidiomas/playlists" target="_blank"ión</h3>
             <p>Explora todas las series por curso.</p>
           </a>
         </div>
       </div>
 
-      <!-- Espacios para videos embebidos (reemplaza VIDEO_ID por tus IDs) -->
-      <div class="grid" style="margin-top: 18px;">
+      <!-- Espacios para embeds (reemplaza VIDEO_ID) -->
+      <div class="grid" style="margin-top: 14px;">
         <div class="card">
           <h3>Video destacado</h3>
           <div class="embed">
-            <!-- Reemplaza VIDEO_ID -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video destacado" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope<div class="embed">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Clase de Kichwa" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope        <div class="embed">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Clase de Español o Inglés" allow="accelerometer;  </main>
-
-  <footer>
-    <div class="container">© 2026 Aprendiendo Idiomas — Portal educativo minimalista.</div>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video destacado" allow="accelerometers="card">
+          <h3>Clase de Kichwa</h3>
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Clase de Kichwa" allow="accelerometers="card">
+          <h3>Clase de Español/Inglés</h3>
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Clase de Español o Inglés" allow="accelerometer; autoplay; clipboard-write; encrypted-mediainer">© 2026 Aprendiendo Idiomas — Portal educativo minimalista.</div>
   </footer>
 </body>
 </html>
