@@ -44,6 +44,7 @@
     .card:hover { border-color: var(--hover); box-shadow: 0 10px 30px rgba(0,0,0,.35) }
     .card:focus-visible { outline: 2px solid var(--brand) }
     .badge { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: var(--card); margin-bottom: .5rem }
+    .badge[data-lang="qvi"] { background: #1b2936; color: #b9d6ff; }
     .card h3 { margin: .2rem 0 .35rem }
     .card p { color: var(--muted); margin: 0 }
 
@@ -95,8 +96,7 @@
       <div class="grid">
         <!-- Kichwa -->
         <a href="./kichwa/index.html">
-          <div class="badge" aria-hidden="true">QVI</div>
-          <h3>Kichwa (Quichua) de Imbabura</h3>
+          <span class="badge" data-lang="qvi" aria-label="Kichwa de Imbabura">QVI</span>
           <p>Curso desde cero con enfoque práctico y respetuoso del Kichwa de Imbabura.</p>
         </a>
 
