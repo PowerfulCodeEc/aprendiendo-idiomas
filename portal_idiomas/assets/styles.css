@@ -192,6 +192,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--mute
   color: #ffffff; /* Asegura que el texto siga blanco */
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(114, 164, 242, 0.4);
+  margin-left: 15px;
 }
 
 /* Ajuste específico para cuando estás en modo móvil */
