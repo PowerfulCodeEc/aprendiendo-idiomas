@@ -3,17 +3,15 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Prueba mínima</title>
-  <!-- GA4 (opcional para la prueba) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0ipt>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DV59EN0VJ3');
-  </script>
+  <title>Prueba mínima visible</title>
+  <style>
+    /* Fuerza contraste para descartar CSS ocultando contenido */
+    html,body { min-height: 100vh; background:#222; color:#00ff99; font: 24px/1.4 system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+  </style>
 </head>
 <body>
-  <h1>Si ves este título, la publicación funciona</h1>
-  <p>Ahora vuelve a agregar <code>assets/styles.css</code> y demás recursos, cuidando las rutas.</p>
+  <h1>Si ves este texto, el HTML se está mostrando correctamente</h1>
+  <p>Luego volveremos a añadir estilos y el tag de GA4 poco a poco.</p>
 </body>
 </html>
