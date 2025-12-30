@@ -1,169 +1,19 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aprendiendo Idiomas | Portal</title>
-  <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59ENript>
+  <meta charset="utf-8">
+  <title>Prueba mínima</title>
+  <!-- GA4 (opcional para la prueba) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0ipt>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    // Inicia GA4 para este sitio
     gtag('config', 'G-DV59EN0VJ3');
   </script>
-
-  <link rel="stylesheet" href="assets/styles.css">
-  
 </head>
 <body>
-  <header>
-    <nav class="container nav">
-      <div class="logo">
-        <span class="logo-badge">AI</span>
-        <span>Aprendiendo Idiomas</span>
-      </div>
-      <div class="menu">
-        <a href="#cursos">Cursos</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#youtube">YouTube</a>
-        <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi'>
-  <svg style="width:20px;height:20px;margin-right:6px;vertical-align:text-bottom" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2a2 2 0 0 0 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
-  </svg>
-  Apóyanos
-</a>
-      </div>
-    </nav>
-  </header>
-  <main class="container">
-    <section class="hero">
-      <h1 class="title">Aprende Kichwa, Español e Inglés</h1>
-      <p class="lead">Tu portal educativo gratuito con videos, material imprimible en PDF y ejercicios prácticos.</p>
-    </section>
-
-    <section id="cursos">
-      <div class="grid">
-        <a href="./kichwa/index.html" class="card">
-          <span class="badge" data-lang="qvi">QVI</span>
-          <h3>Kichwa Imbabura</h3>
-          <p>Curso práctico respetando la variante de Imbabura. Desde cero.</p>
-        </a>
-
-        <a href="./espanol/index.html" class="card">
-          <span class="badge" data-lang="es">ES</span>
-          <h3>Español Latino</h3>
-          <p>Para principiantes. Incluye gramática y ejercicios de lectura.</p>
-        </a>
-
-        <a href="./ingles/index.html" class="card">
-          <span class="badge" data-lang="en">EN</span>
-          <h3>Inglés</h3>
-          <p>Aprende vocabulario con Minecraft.</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="recursos">
-      <h2>Recursos de aprendizaje</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>🎬 Videos Explicativos</h3>
-          <p>Clases integradas desde YouTube con subtítulos y explicaciones claras.</p>
-        </div>
-        <div class="card">
-          <h3>🖨️ PDFs Imprimibles</h3>
-          <p>Descarga guías rápidas, hojas de trabajo y tarjetas de vocabulario.</p>
-        </div>
-        <div class="card">
-          <h3>🧩 Ejercicios Interactivos</h3>
-          <p>Cuestionarios al final de cada lección para medir tu progreso.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="youtube">
-      <div class="yt-hero">
-        <h2 class="yt-title">
-          <svg class="yt-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-          Canal Oficial
-        </h2>
-        <p class="lead" style="margin: 0; text-align: left;">
-          Visita <strong>@aprendiendoidiomas</strong> para ver clases completas, shorts y prácticas guiadas. ¡Suscríbete para apoyar el proyecto!
-        </p>
-        
-        <div class="yt-actions">
-          <a href="https://www.youtube.com/@aprendiendoidiomas?sub_confirmation=1" class="cta" target="_blank">
-            Suscribirse en YouTube
-          </a>
-          <a href="https://www.youtube.com/@aprendiendoidiomas/playlists" class="cta cta-secondary" target="_blank">
-            Ver Listas de Reproducción
-          </a>
-        </div>
-      </div>
-
-      <div class="grid">
-        
-        <div class="card">
-            <h3>Playlist de Kichwa</h3>
-            <div class="embed">
-             <iframe
-              src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct"
-              title="Lista de reproducción de Kichwa"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-             </iframe>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Playlist de Español</h3>
-            <div class="embed">
-             <iframe
-              src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0"
-              title="Lista de reproducción de Español"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-             </iframe>
-            </div>
-        </div>
-        
-        <div class="card">
-          <h3>Playlist de Inglés</h3>
-          <div class="embed">
-            <iframe
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5"
-            title="Lista de reproducción de Inglés"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section id="donaciones" class="donation-section">
-      <div class="donation-card">
-        <h2>☕ Invítanos a un café</h2>
-        <p class="lead" style="margin-bottom: 20px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
-          Ayúdame a mantener la educación gratuita y sin anuncios. Tu aporte se invierte 100% en mejorar la calidad de las clases y crear nuevos materiales de estudio. ¡Gracias por tu apoyo!
-        </p>
-        
-        <div class="kofi-wrapper">
-          <iframe 
-            src='https://ko-fi.com/aprendiendoidiomas/?hidefeed=true&widget=true&embed=true' 
-            title='aprendiendoidiomas'>
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 Aprendiendo Idiomas.</p>
-    </div>
-  </footer>
+  <h1>Si ves este título, la publicación funciona</h1>
+  <p>Ahora vuelve a agregar <code>assets/styles.css</code> y demás recursos, cuidando las rutas.</p>
 </body>
 </html>
