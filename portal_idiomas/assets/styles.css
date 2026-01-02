@@ -202,3 +202,11 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--mute
     display: inline-flex; /* Asegura que no ocupe todo el ancho si no quieres */
   }
 }
+
+.icon-kofi {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: text-bottom;
+}
+
