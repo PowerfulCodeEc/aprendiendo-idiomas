@@ -431,3 +431,41 @@ footer {
     background: #f8fafc;
   }
 }
+
+/* =========================================
+   MEJORA VISUAL PARA VIDEOS (FULL WIDTH)
+   ========================================= */
+
+/* Clase especial para tarjetas de video */
+.card-media {
+  padding: 0; /* Quitamos el relleno para que el video toque los bordes */
+  overflow: hidden; /* Asegura que el video respete las esquinas redondeadas */
+  background: var(--card); /* Asegura el fondo correcto */
+}
+
+/* Ajuste del contenedor del video dentro de la tarjeta */
+.card-media .embed {
+  width: 100%;
+  border-radius: 0; /* Quitamos el borde redondeado del embed, ya lo da la tarjeta */
+  border-bottom: 1px solid var(--border); /* Línea sutil separadora */
+  aspect-ratio: 16/9; /* Mantiene proporción panorámica */
+}
+
+/* Contenedor para el texto debajo del video */
+.card-content {
+  padding: 20px; /* Espacio para el título */
+  text-align: center; /* Centramos el título */
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* AJUSTE PARA COMPUTADORAS (Escritorio) */
+@media (min-width: 1024px) {
+  /* Hacemos el video un poquito más alto en PC para que se vea más grande */
+  .card-media .embed {
+    aspect-ratio: 4/3; /* Formato un poco más cuadrado = video más grande */
+  }
+}
