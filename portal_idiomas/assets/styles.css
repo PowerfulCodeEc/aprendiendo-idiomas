@@ -326,3 +326,108 @@ footer {
   text-align: center; 
   font-size: 0.9rem; 
 }
+
+/* =========================================
+   ESTILOS TARJETA DE COLABORACIÓN (MINECRAFT)
+   ========================================= */
+
+/* 1. Contenedor especial: Borde brillante */
+.card-special {
+  position: relative;
+  padding: 0; /* Quitamos padding para controlar el footer */
+  overflow: hidden;
+  border: 1px solid var(--border);
+  /* Un borde sutilmente dorado/violeta para indicar "Premium" */
+  box-shadow: 0 0 15px rgba(184, 146, 255, 0.05); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover en toda la tarjeta */
+.card-special:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-color: var(--accent);
+}
+
+/* 2. Área del curso (Parte superior) */
+.card-main-link {
+  display: block;
+  padding: 24px;
+  flex-grow: 1; /* Ocupa el espacio disponible */
+}
+
+/* Cabecera con Badge y Etiqueta */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Etiqueta brillante de "Colaboración" */
+.tag-collab {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fbbf24; /* Color dorado */
+  background: rgba(251, 191, 36, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* 3. Footer de Créditos (Parte inferior) */
+.card-footer-collab {
+  background: rgba(0, 0, 0, 0.2); /* Fondo más oscuro */
+  border-top: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  gap: 10px;
+}
+
+.collab-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.collab-info span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.collab-info strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* 4. Botón de Suscripción Mini */
+.btn-friend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #cc0000; /* Rojo YouTube */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-friend:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}
+
+/* Ajuste para modo claro */
+@media (prefers-color-scheme: light) {
+  .card-footer-collab {
+    background: #f8fafc;
+  }
+}
