@@ -101,49 +101,94 @@
         </div>
       </div>
     </section>
-
     <section id="youtube">
       <div class="yt-hero">
-        <h2 class="yt-title">
-          <svg class="yt-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-          Canal Oficial
-        </h2>
-        <!-- Estilo inline eliminado aquí -->
-        <p class="lead">
-          Visita <strong>@aprendiendoidiomas</strong> para ver clases completas, shorts y prácticas guiadas. ¡Suscríbete para apoyar el proyecto!
-        </p>
+        <!-- Fondo decorativo abstracto -->
+        <div class="yt-bg-pattern"></div>
         
-        <div class="yt-actions">
-          <a href="https://www.youtube.com/@aprendiendoidiomas?sub_confirmation=1" class="cta" target="_blank">
-            Suscribirse en YouTube
-          </a>
-          <a href="https://www.youtube.com/@aprendiendoidiomas/playlists" class="cta cta-secondary" target="_blank">
-            Ver Listas de Reproducción
-          </a>
+        <div class="yt-content">
+          <div class="yt-header">
+            <div class="yt-logo-wrapper">
+              <svg class="yt-icon-logo" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="yt-title">Canal Oficial</h2>
+              <span class="yt-subtitle">@aprendiendoidiomas</span>
+            </div>
+          </div>
+
+          <p class="yt-desc">
+            Accede a nuestra videoteca completa. Clases gratuitas, pronunciación nativa y ejercicios paso a paso. 
+            <strong>¡Suscríbete y activa la campanita! 🔔</strong>
+          </p>
+          
+          <div class="yt-actions">
+            <a href="https://www.youtube.com/@aprendiendoidiomas?sub_confirmation=1" class="btn-yt-primary" target="_blank">
+              Suscribirse
+            </a>
+            <a href="https://www.youtube.com/@aprendiendoidiomas/playlists" class="btn-yt-secondary" target="_blank">
+              Ver todas las Listas
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="grid">
         
-  <!-- 1. Tarjeta Kichwa -->
-  <div class="card card-media">
-    <div class="embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" title="Kichwa Playlist" allowfullscreen></iframe>
-    </div>
-    <div class="card-content">
-      <h3>Playlist de Kichwa</h3>
-    </div>
-  </div>
+        <!-- 1. Tarjeta Kichwa -->
+        <div class="card card-media">
+          <div class="embed">
+            <!-- loading="lazy" ayuda a que la página cargue más rápido -->
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" title="Kichwa Playlist" allowfullscreen></iframe>
+          </div>
+          <div class="card-content">
+            <div class="card-text">
+              <h3>Kichwa Imbabura</h3>
+              <p>Curso completo de gramática y vocabulario.</p>
+            </div>
+            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" target="_blank" class="btn-media-link">
+              Ver en YouTube &rarr;
+            </a>
+          </div>
+        </div>
 
-  <!-- 2. Tarjeta Español -->
-  <div class="card card-media">
-    <div class="embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" title="Español Playlist" allowfullscreen></iframe>
-    </div>
-    <div class="card-content">
-      <h3>Playlist de Español</h3>
-    </div>
-  </div>
+        <!-- 2. Tarjeta Español -->
+        <div class="card card-media">
+          <div class="embed">
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" title="Español Playlist" allowfullscreen></iframe>
+          </div>
+          <div class="card-content">
+            <div class="card-text">
+              <h3>Español Latino</h3>
+              <p>Lecciones básicas y lectura comprensiva.</p>
+            </div>
+            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" target="_blank" class="btn-media-link">
+              Ver en YouTube &rarr;
+            </a>
+          </div>
+        </div>
+        
+        <!-- 3. Tarjeta Inglés -->
+        <div class="card card-media">
+          <div class="embed">
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" title="Inglés Playlist" allowfullscreen></iframe>
+          </div>
+          <div class="card-content">
+            <div class="card-text">
+              <h3>Inglés Gamer</h3>
+              <p>Aprende jugando con Minecraft.</p>
+            </div>
+            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" target="_blank" class="btn-media-link">
+              Ver en YouTube &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   
   <!-- 3. Tarjeta Inglés (Minecraft) -->
   <div class="card card-media">
