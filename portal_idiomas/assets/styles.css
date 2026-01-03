@@ -13,7 +13,7 @@
   --border: #1d2533;      /* Bordes sutiles */
   --hover: #273144;       /* Fondo al pasar el mouse */
   --red: #ff4d4d;         /* Rojo para YouTube */
-  --yt-bg: #0e121a;       /* Fondo especial sección YT */
+  --yt-bg: #0e121a;       /* Fondo base sección YT */
 }
 
 /* Automatización: Detecta si el usuario usa Modo Claro */
@@ -32,7 +32,7 @@
     --yt-bg: #ffffff;
   }
   /* Sombra suave para tarjetas en modo claro */
-  .card, .yt-hero, .donation-card {
+  .card, .donation-card {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 }
@@ -59,7 +59,6 @@ a { color: inherit; text-decoration: none; }
 /* =========================================
    3. LAYOUT Y ESTRUCTURA
    ========================================= */
-/* Contenedor centralizado con ancho máximo */
 .container { 
   max-width: 1100px; 
   margin: 0 auto; 
@@ -75,7 +74,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
 }
 
-/* Contenedor de videos (YouTube embeds) responsive */
+/* Contenedor de videos Genérico (Base) */
 .embed { 
   aspect-ratio: 16/9; 
   background: #000; 
@@ -93,7 +92,6 @@ a { color: inherit; text-decoration: none; }
   text-align: center; 
 }
 
-/* Título con gradiente */
 .title { 
   font-size: clamp(2rem, 5vw, 3.5rem); 
   font-weight: 800; 
@@ -104,7 +102,6 @@ a { color: inherit; text-decoration: none; }
   color: transparent; 
 }
 
-/* Texto introductorio (Lead) */
 .lead { 
   color: var(--muted); 
   max-width: 600px; 
@@ -131,7 +128,6 @@ header {
   height: 64px; 
 }
 
-/* Logotipo */
 .logo { 
   display: flex; 
   gap: .6rem; 
@@ -150,7 +146,6 @@ header {
   font-weight: 800; 
 }
 
-/* Menú de enlaces */
 .menu { display: flex; gap: 0.5rem; }
 
 .menu a { 
@@ -162,7 +157,7 @@ header {
 }
 .menu a:hover { background: var(--card); color: var(--text); }
 
-/* Ajustes para móviles (Responsive) */
+/* Ajustes Responsive Nav */
 @media (max-width: 768px) {
   .nav { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 10px; }
   .menu { order: 2; width: 100%; overflow-x: auto; padding-bottom: 5px; margin-top: 10px; gap: 0; }
@@ -170,10 +165,10 @@ header {
 }
 
 /* =========================================
-   6. COMPONENTES (Tarjetas, Botones, Badges)
+   6. COMPONENTES (Tarjetas, Badges, Botones)
    ========================================= */
 
-/* --- Tarjetas (Cards) --- */
+/* --- Tarjetas Estándar --- */
 .card { 
   background: var(--card); 
   border: 1px solid var(--border); 
@@ -187,14 +182,14 @@ header {
 .card h3 { margin: 0 0 .5rem; font-size: 1.25rem; }
 .card p { color: var(--muted); margin: 0; font-size: 0.95rem; }
 
-/* Efecto hover solo si la tarjeta es un enlace */
+/* Efecto hover solo enlaces */
 a.card:hover { 
   border-color: var(--brand); 
   box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
   transform: translateY(-4px); 
 }
 
-/* --- Badges (Etiquetas de idioma) --- */
+/* --- Badges Idioma --- */
 .badge { 
   width: 44px; 
   height: 44px; 
@@ -209,25 +204,7 @@ a.card:hover {
 .badge[data-lang="es"]  { background: rgba(158, 255, 128, 0.15); color: var(--brand-2); border: 1px solid rgba(158, 255, 128, 0.3); }
 .badge[data-lang="en"]  { background: rgba(184, 146, 255, 0.15); color: var(--accent); border: 1px solid rgba(184, 146, 255, 0.3); }
 
-/* --- Botones Generales (CTA) --- */
-.cta { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 8px; 
-  padding: .75rem 1.2rem; 
-  border-radius: 10px; 
-  font-weight: 700; 
-  color: #fff; 
-  background: var(--brand); 
-  transition: filter 0.2s; 
-  font-size: 0.95rem; 
-}
-.cta:hover { filter: brightness(1.1); }
-
-.cta-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
-.cta-secondary:hover { border-color: var(--muted); background: var(--hover); }
-
-/* --- Botón Especial Ko-fi (Nav) --- */
+/* --- Botón Ko-fi (Nav) --- */
 .menu .btn-kofi {
   background-color: #72a4f2; 
   color: #ffffff;
@@ -243,7 +220,6 @@ a.card:hover {
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(114, 164, 242, 0.4);
-  /* Pequeño margen extra al hover para efecto visual */
   margin-left: 15px; 
 }
 .icon-kofi { width: 20px; height: 20px; margin-right: 6px; vertical-align: text-bottom; }
@@ -253,32 +229,308 @@ a.card:hover {
 }
 
 /* =========================================
-   7. SECCIONES ESPECÍFICAS
+   7. SECCIÓN YOUTUBE (MEJORADA)
    ========================================= */
 
-/* --- Sección YouTube --- */
 .yt-hero { 
   margin: 60px 0 32px; 
-  padding: 32px; 
-  border-radius: 20px; 
-  border: 1px solid var(--border);
-  background: radial-gradient(circle at top right, rgba(255, 77, 77, 0.1), transparent 40%),
-              radial-gradient(circle at bottom left, rgba(184, 146, 255, 0.1), transparent 40%),
-              var(--yt-bg);
+  border-radius: 24px; 
+  /* Fondo oscuro con un degradado rojo sutil y premium */
+  background: linear-gradient(135deg, #1f0505 0%, #0f0f0f 100%);
+  border: 1px solid #3f1010;
   position: relative; 
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-.yt-title { display: flex; align-items: center; gap: .8rem; margin: 0 0 1rem; font-size: clamp(1.5rem, 3vw, 2rem); }
-.yt-icon { color: var(--red); }
-.yt-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
 
-/* Sobrescribe el texto lead general para alinearlo a la izquierda en YouTube */
-.yt-hero .lead {
-  margin: 0;
+/* Patrón de fondo (Círculos decorativos) */
+.yt-bg-pattern {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,0,0,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.yt-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Cabecera del Hero */
+.yt-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.yt-logo-wrapper {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255,0,0,0.4);
+}
+
+.yt-icon-logo {
+  color: #ff0000;
+  width: 32px;
+  height: 32px;
+}
+
+.yt-title { 
+  margin: 0; 
+  font-size: 2rem; 
+  color: white; /* Forzado a blanco para contraste en banner oscuro */
+  line-height: 1;
+}
+
+.yt-subtitle {
+  color: #aaa;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.yt-desc {
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 0 30px 0;
+  font-size: 1.1rem;
+}
+
+/* Botones Personalizados YouTube */
+.yt-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-yt-primary {
+  background-color: #cc0000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid #cc0000;
+  box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+}
+
+.btn-yt-primary:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+}
+
+.btn-yt-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-yt-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* Ajustes YT para Modo Claro */
+@media (prefers-color-scheme: light) {
+  .yt-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%);
+    border: 1px solid #fee2e2;
+  }
+  .yt-title { color: #111; }
+  .yt-desc { color: #555; }
+  .btn-yt-secondary {
+    color: #cc0000;
+    border-color: rgba(204, 0, 0, 0.2);
+  }
+  .btn-yt-secondary:hover {
+    background-color: rgba(204, 0, 0, 0.05);
+    border-color: #cc0000;
+  }
+}
+
+/* =========================================
+   8. TARJETAS DE VIDEO (MEJORADAS)
+   ========================================= */
+
+.card-media {
+  padding: 0; /* Sin padding para que el video toque bordes */
+  overflow: hidden;
+  background: var(--card);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-media:hover {
+  transform: translateY(-4px); 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
+}
+
+/* Embed específico dentro de tarjeta: 16:9 siempre */
+.card-media .embed {
+  width: 100%;
+  aspect-ratio: 16/9; /* Corrige barras negras */
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-text {
+  flex-grow: 1;
   text-align: left;
 }
 
-/* --- Sección Donaciones --- */
+.card-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+/* Enlace dentro de la tarjeta */
+.btn-media-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+.btn-media-link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* =========================================
+   9. TARJETA ESPECIAL (MINECRAFT/COLLAB)
+   ========================================= */
+
+.card-special {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 15px rgba(184, 146, 255, 0.05); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-special:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-color: var(--accent);
+}
+
+.card-main-link {
+  display: block;
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.tag-collab {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.card-footer-collab {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  gap: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  .card-footer-collab { background: #f8fafc; }
+}
+
+.collab-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.collab-info span { color: var(--muted); font-size: 0.75rem; }
+.collab-info strong { color: var(--text); font-weight: 700; }
+
+.btn-friend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #cc0000;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-friend:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}
+
+/* =========================================
+   10. SECCIÓN DONACIONES Y FOOTER
+   ========================================= */
+
 .donation-section {
   margin-top: 80px;
   text-align: center;
@@ -295,14 +547,11 @@ a.card:hover {
 }
 .donation-card h2 { margin-top: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
 
-/* Ajuste específico del texto para donaciones */
 .donation-card .lead {
   margin-bottom: 20px;
   max-width: 700px;
-  /* El margin auto ya viene heredado de .lead global */
 }
 
-/* Widget de Ko-fi (Iframe) */
 .kofi-wrapper {
   max-width: 100%;
   width: 500px;
@@ -315,9 +564,6 @@ a.card:hover {
 }
 .kofi-wrapper iframe { width: 100%; height: 100%; border: none; }
 
-/* =========================================
-   8. FOOTER (PIE DE PÁGINA)
-   ========================================= */
 footer { 
   border-top: 1px solid var(--border); 
   padding: 40px 0; 
@@ -325,147 +571,4 @@ footer {
   margin-top: 60px; 
   text-align: center; 
   font-size: 0.9rem; 
-}
-
-/* =========================================
-   ESTILOS TARJETA DE COLABORACIÓN (MINECRAFT)
-   ========================================= */
-
-/* 1. Contenedor especial: Borde brillante */
-.card-special {
-  position: relative;
-  padding: 0; /* Quitamos padding para controlar el footer */
-  overflow: hidden;
-  border: 1px solid var(--border);
-  /* Un borde sutilmente dorado/violeta para indicar "Premium" */
-  box-shadow: 0 0 15px rgba(184, 146, 255, 0.05); 
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Efecto hover en toda la tarjeta */
-.card-special:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  border-color: var(--accent);
-}
-
-/* 2. Área del curso (Parte superior) */
-.card-main-link {
-  display: block;
-  padding: 24px;
-  flex-grow: 1; /* Ocupa el espacio disponible */
-}
-
-/* Cabecera con Badge y Etiqueta */
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-/* Etiqueta brillante de "Colaboración" */
-.tag-collab {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fbbf24; /* Color dorado */
-  background: rgba(251, 191, 36, 0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(251, 191, 36, 0.3);
-  letter-spacing: 0.5px;
-}
-
-/* 3. Footer de Créditos (Parte inferior) */
-.card-footer-collab {
-  background: rgba(0, 0, 0, 0.2); /* Fondo más oscuro */
-  border-top: 1px solid var(--border);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  gap: 10px;
-}
-
-.collab-info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.collab-info span {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.collab-info strong {
-  color: var(--text);
-  font-weight: 700;
-}
-
-/* 4. Botón de Suscripción Mini */
-.btn-friend {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: #cc0000; /* Rojo YouTube */
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.75rem;
-  transition: background 0.2s, transform 0.1s;
-}
-
-.btn-friend:hover {
-  background-color: #ff0000;
-  transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-}
-
-/* Ajuste para modo claro */
-@media (prefers-color-scheme: light) {
-  .card-footer-collab {
-    background: #f8fafc;
-  }
-}
-
-/* =========================================
-   MEJORA VISUAL PARA VIDEOS (FULL WIDTH)
-   ========================================= */
-
-/* Clase especial para tarjetas de video */
-.card-media {
-  padding: 0; /* Quitamos el relleno para que el video toque los bordes */
-  overflow: hidden; /* Asegura que el video respete las esquinas redondeadas */
-  background: var(--card); /* Asegura el fondo correcto */
-}
-
-/* Ajuste del contenedor del video dentro de la tarjeta */
-.card-media .embed {
-  width: 100%;
-  border-radius: 0; /* Quitamos el borde redondeado del embed, ya lo da la tarjeta */
-  border-bottom: 1px solid var(--border); /* Línea sutil separadora */
-  aspect-ratio: 16/9; /* Mantiene proporción panorámica */
-}
-
-/* Contenedor para el texto debajo del video */
-.card-content {
-  padding: 20px; /* Espacio para el título */
-  text-align: center; /* Centramos el título */
-}
-
-.card-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-/* AJUSTE PARA COMPUTADORAS (Escritorio) */
-@media (min-width: 1024px) {
-  /* Hacemos el video un poquito más alto en PC para que se vea más grande */
-  .card-media .embed {
-    aspect-ratio: 4/3; /* Formato un poco más cuadrado = video más grande */
-  }
 }
