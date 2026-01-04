@@ -576,3 +576,117 @@ footer {
   text-align: center; 
   font-size: 0.9rem; 
 }
+
+/* =========================================
+   11. ELEMENTOS PARA LECCIONES (Globales)
+   ========================================= */
+
+/* --- Cajas de Tips (Callouts) --- */
+.callout {
+  border-left: 4px solid var(--brand);
+  padding: 15px 20px;
+  background: rgba(111, 227, 255, 0.05);
+  border-radius: 8px;
+  margin: 24px 0;
+  color: var(--text);
+}
+.callout strong { color: var(--brand); }
+
+/* --- Acordeones (Details/Summary) --- */
+details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: background 0.2s;
+}
+details[open] { background: var(--hover); }
+summary { cursor: pointer; font-weight: 700; color: var(--brand-2); list-style: none; }
+/* Flechita personalizada opcional para details */
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; float: right; font-weight: bold; }
+details[open] summary::after { content: '-'; }
+
+details ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); margin-top: 10px; }
+
+
+/* --- WIDGET DE DESCARGA PREMIUM --- */
+.download-widget {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(145deg, var(--card) 0%, rgba(17, 23, 34, 0.6) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  margin: 40px 0; /* Margen vertical automático */
+}
+
+/* Efecto Hover */
+.download-widget:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+/* Línea de luz lateral */
+.download-widget::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 4px; height: 100%;
+  background: linear-gradient(to bottom, var(--brand), var(--brand-2));
+}
+
+/* Icono del archivo */
+.file-icon {
+  width: 80px; height: 80px;
+  background: rgba(111, 227, 255, 0.1);
+  border-radius: 12px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+.file-icon svg { width: 36px; height: 36px; margin-bottom: 4px; }
+.file-type { font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; }
+
+/* Texto Info */
+.file-info { flex: 1; min-width: 250px; }
+.file-tag { 
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; 
+  color: var(--brand-2); font-weight: 700; 
+  margin-bottom: 5px; display: block;
+}
+.file-info h3 { margin: 0 0 8px 0; font-size: 1.4rem; color: var(--text); }
+.file-info p { margin: 0 0 12px 0; font-size: 0.95rem; color: var(--muted); }
+.file-meta { font-size: 0.85rem; color: var(--muted); display: flex; gap: 8px; opacity: 0.7; }
+
+/* Botón de descarga */
+.btn-download {
+  background: var(--text); 
+  color: var(--bg);
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-download:hover {
+  transform: scale(1.05);
+  background: var(--brand);
+  color: #000;
+  box-shadow: 0 0 20px rgba(111, 227, 255, 0.4);
+}
+
+/* Ajuste móvil */
+@media (max-width: 600px) {
+  .download-widget { flex-direction: column; text-align: center; }
+  .download-widget::before { width: 100%; height: 4px; top: 0; left: 0; }
+  .file-meta { justify-content: center; }
+}
