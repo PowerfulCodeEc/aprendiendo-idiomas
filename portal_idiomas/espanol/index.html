@@ -1,23 +1,165 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Curso de Español</title>
-<style>body{margin:0;background:#0b0f14;color:#eaf2ff;font:16px/1.5 system-ui}a{text-decoration:none;color:#6fe3ff}.container{max-width:1100px;margin:auto;padding:20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid{grid-template-columns:1fr}}.card{background:#111722;border-radius:16px;padding:16px}</style>
-</head><body>
-  <nav class="container">../index.html← Volver</a></nav>
-  <main class="container">
-    <h1>Curso de Kichwa (Quichua)</h1>
-    <h2 id="lecciones">Lecciones</h2>
-    <div class="grid">
-      <div class="card"><h3>Lección 1</h3><p>Saludos y presentaciones.</p></div>
-      <div class="card"><h3>Lección 2</h3><p>Partículas básicas.</p></div>
-      <div class="card"><h3>Lección 3</h3><p>Números y tiempo.</p></div>
-    </div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Español Latino | Próximamente - Aprendiendo Idiomas</title>
+  
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../assets/styles.css">
 
-    <h2 id="material">Material imprimible</h2>
-    <div class="grid">
-      <a class="card" href="../assets/pdf/kichwa/guia-rapida-kich)</a>
-      <a class="card" href="../assets/pdf/kichwa/hojas-practica-kicha (PDF)</a>
-      <a class="card" href="../assets/pdf/kichwa/tarjetas-vocabulario-kocabulario (PDF)</a>
+  <!-- Estilos exclusivos para esta página "Coming Soon" -->
+  <style>
+    /* Centrado vertical perfecto */
+    .coming-soon-container {
+      min-height: 80vh; /* Ocupa casi toda la pantalla */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Tarjeta flotante */
+    .blueprint-card {
+      background: var(--card);
+      border: 1px dashed var(--brand); /* Borde punteado estilo plano */
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      animation: float 6s ease-in-out infinite; /* Animación de flotación */
+    }
+
+    /* Animación suave */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Icono central */
+    .construction-icon {
+      width: 80px; height: 80px;
+      background: rgba(158, 255, 128, 0.1); /* Verde suave */
+      color: var(--brand-2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    /* Barra de progreso */
+    .progress-container {
+      background: var(--bg);
+      border-radius: 50px;
+      height: 10px;
+      width: 100%;
+      margin: 20px 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .progress-bar {
+      height: 100%;
+      width: 35%; /* Simula un 35% de avance */
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      border-radius: 50px;
+      position: relative;
+    }
+    /* Efecto de brillo en la barra */
+    .progress-bar::after {
+      content: '';
+      position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+      background-image: linear-gradient(
+        -45deg, rgba(255,255,255,.2) 25%, transparent 25%, 
+        transparent 50%, rgba(255,255,255,.2) 50%, 
+        rgba(255,255,255,.2) 75%, transparent 75%, transparent);
+      z-index: 1;
+      background-size: 20px 20px;
+      animation: move 2s linear infinite;
+    }
+    @keyframes move {
+      0% { background-position: 0 0; }
+      100% { background-position: 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SIMPLE -->
+  <header>
+    <nav class="container nav">
+      <a href="../index.html" class="logo">
+        <span class="logo-badge">AI</span>
+        <span class="logo-text">Aprendiendo Idiomas</span>
+      </a>
+      <!-- Botón de salida rápida -->
+      <a href="../index.html" class="nav-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Volver al Inicio
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="coming-soon-container">
+      
+      <!-- TARJETA FLOTANTE DE "EN CONSTRUCCIÓN" -->
+      <div class="blueprint-card">
+        
+        <!-- Icono: Herramientas / Construcción -->
+        <div class="construction-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+        </div>
+
+        <span class="badge" data-lang="es" style="margin: 0 auto 15px;">ES</span>
+        <h1 style="margin: 0 0 10px;">¡Estamos trabajando en ello!</h1>
+        <p class="lead" style="font-size: 0.95rem;">
+          Estamos preparando las lecciones de <strong>Español Latino</strong> con la misma calidad que el curso de Kichwa.
+        </p>
+
+        <!-- Barra de Progreso Animada -->
+        <div style="text-align: left; margin-top: 25px;">
+          <small style="color: var(--muted); font-weight: 700;">PROGRESO DE DESARROLLO</small>
+          <div class="progress-container">
+            <div class="progress-bar"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted);">
+            <span>Planificación</span>
+            <span>35% Completado</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ACCIONES: ¿Qué hace el usuario ahora? -->
+      <div style="margin-top: 40px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+        
+        <!-- Opción 1: Ir a lo que SÍ está listo (Kichwa) -->
+        <a href="../kichwa/index.html" class="cta cta-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          Estudiar Kichwa
+        </a>
+
+        <!-- Opción 2: Ir a YouTube (Quizás hay videos ahí) -->
+        <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" target="_blank" class="cta cta-outline">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          Ver videos disponibles
+        </a>
+
+      </div>
+
     </div>
   </main>
-</body></html>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Aprendiendo Idiomas.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
