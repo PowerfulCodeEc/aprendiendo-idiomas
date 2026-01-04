@@ -641,3 +641,105 @@ footer {
     background: linear-gradient(to right, var(--card), rgba(111, 227, 255, 0.03));
   }
 }
+
+/* =========================================
+   14. LAYOUT CURSO (SIDEBAR DERECHA)
+   ========================================= */
+
+/* Contenedor principal dividido en 2 columnas */
+.course-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Contenido flexible | Sidebar fija */
+  gap: 40px;
+  align-items: start; /* Para que el sticky funcione */
+  padding-bottom: 60px;
+}
+
+/* Ajuste para móviles: Una sola columna */
+@media (max-width: 960px) {
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+  /* En móvil, ocultamos la sidebar lateral o la ponemos abajo */
+  .course-sidebar {
+    order: 2; /* Que aparezca después del contenido en móviles */
+    position: static !important; /* Ya no es sticky en móvil */
+  }
+}
+
+/* --- ESTILO DE LA BARRA LATERAL --- */
+.course-sidebar {
+  position: sticky;
+  top: 90px; /* Se pega al bajar (considerando el header) */
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+/* Lista de lecciones */
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.lesson-item:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* LECCIÓN ACTIVA (La que estás viendo ahora) */
+.lesson-item.active {
+  background: rgba(111, 227, 255, 0.1);
+  color: var(--brand);
+  border-color: rgba(111, 227, 255, 0.3);
+  font-weight: 600;
+}
+
+/* Iconos de estado */
+.status-icon {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+
+.lesson-item.active .status-icon {
+  border-color: var(--brand);
+  background: var(--brand);
+  box-shadow: 0 0 10px var(--brand);
+}
+
+/* Check de completado (Opcional para futuro) */
+.lesson-item.completed .status-icon {
+  background: var(--brand-2); /* Verde */
+  border-color: var(--brand-2);
+}
