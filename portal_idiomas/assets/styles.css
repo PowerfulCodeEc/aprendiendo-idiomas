@@ -774,3 +774,84 @@ details ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); margin-t
     display: none; /* Ocultamos iconos en móvil si falta espacio, o déjalos si prefieres */
   }
 }
+
+/* --- NAVEGACIÓN ENTRE LECCIONES (PAGINACIÓN) --- */
+.lesson-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 60px; /* Espacio antes de donaciones/footer */
+  gap: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 30px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex: 1; /* Ocupan el mismo ancho en móvil */
+  max-width: 300px;
+}
+
+/* Botón ANTERIOR (Estilo secundario/sutil) */
+.nav-btn.prev {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.nav-btn.prev:hover {
+  background: var(--hover);
+  color: var(--text);
+  transform: translateX(-5px); /* Se mueve a la izquierda */
+}
+
+/* Botón SIGUIENTE (Estilo primario/llamativo) */
+.nav-btn.next {
+  background: var(--brand);
+  color: #0b0f14; /* Texto oscuro para contraste */
+  font-weight: 800;
+  justify-content: flex-end; /* Alinea contenido a la derecha */
+  text-align: right;
+  box-shadow: 0 4px 15px rgba(111, 227, 255, 0.3);
+}
+.nav-btn.next:hover {
+  filter: brightness(1.1);
+  transform: translateX(5px); /* Se mueve a la derecha */
+  box-shadow: 0 6px 20px rgba(111, 227, 255, 0.5);
+}
+
+/* Textos dentro de los botones */
+.nav-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+.nav-label small {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+.nav-label strong {
+  font-size: 1rem;
+}
+
+/* Estado Deshabilitado (Para la primera lección que no tiene 'Anterior') */
+.nav-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  background: transparent;
+  border-color: transparent;
+}
+
+/* Móvil: Stack vertical si los títulos son largos */
+@media (max-width: 500px) {
+  .lesson-navigation { gap: 10px; }
+  .nav-btn { padding: 12px; }
+  .nav-label strong { font-size: 0.9rem; }
+}
