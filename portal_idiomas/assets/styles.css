@@ -449,7 +449,7 @@ footer {
   width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border); flex-shrink: 0;
 }
 .lesson-item.active .status-icon {
-  border-color: var(--brand); background: var(--brand); box-shadow: 0 0 10px var(--brand);
+  border-color: var(--brand); background: var(--brand); box-shadow: none;
 }
 
 /* ==========================================================================
