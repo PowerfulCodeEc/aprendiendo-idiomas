@@ -61,10 +61,17 @@
   <main class="container">
     
     <!-- ========= HERO DEL CURSO ========= -->
-    <section class="hero">
+        <section class="hero">
       <span class="badge" data-lang="qvi" style="margin: 0 auto 1rem;">QVI</span>
       <h1 class="title">Curso de Kichwa Imbabura</h1>
       <p class="lead">Introducción al dialecto, gramática regular y consejos prácticos para empezar.</p>
+      
+      <!-- BOTÓN DE INICIO RÁPIDO -->
+      <div style="margin-top: 25px;">
+        <a href="leccion1.html" class="cta">
+          Empezar Lección 1 &rarr;
+        </a>
+      </div>
     </section>
 
     <!-- ========= INTRODUCCIÓN ========= -->
@@ -223,6 +230,28 @@
         </div>
 
       </div>
+            <!-- NAVEGACIÓN DEL CURSO -->
+      <div class="lesson-navigation">
+        
+        <!-- Botón Izquierdo (Deshabilitado en la intro) -->
+        <a href="#" class="nav-btn prev disabled">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <div class="nav-label">
+            <small>Anterior</small>
+            <strong>--</strong>
+          </div>
+        </a>
+
+        <!-- Botón Derecho (Ir a Lección 1) -->
+        <!-- NOTA: Cuando crees leccion1.html, esto funcionará -->
+        <a href="leccion1.html" class="nav-btn next">
+          <div class="nav-label">
+            <small>Siguiente</small>
+            <strong>Lección 1: Saludos</strong>
+          </div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
     </section>
     
     <!-- ========= VIDEO ========= -->
