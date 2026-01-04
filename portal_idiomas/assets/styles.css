@@ -752,3 +752,25 @@ details ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); margin-t
   .playlist-arrow { transform: rotate(90deg); }
   .playlist-link:hover .playlist-arrow { transform: rotate(90deg) translateY(5px); }
 }
+
+/* --- AJUSTES DEL MENÚ CON ICONOS --- */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Espacio entre icono y texto */
+  font-weight: 500;
+}
+
+/* En móviles, ocultamos el texto "Aprendiendo Idiomas" del logo para que quepan los iconos del menú */
+@media (max-width: 600px) {
+  .logo-text {
+    display: none;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.4rem !important; /* Reducimos padding lateral en móvil */
+  }
+  .nav-link svg {
+    display: none; /* Ocultamos iconos en móvil si falta espacio, o déjalos si prefieres */
+  }
+}
