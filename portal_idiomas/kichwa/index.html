@@ -6,7 +6,7 @@
   <title>Curso Kichwa Imbabura | Aprendiendo Idiomas</title>
   <meta name="description" content="Introducción al curso de Kichwa (Quichua) de Imbabura: verbos, partículas y dialecto. Aprende gratis." />
   
-  <!-- Google tag (gtag.js) - Igual que en el inicio -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0VJ3">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,41 +14,34 @@
     gtag('config', 'G-DV59EN0VJ3');
   </script>
 
-  <!-- ENLACE AL CSS GLOBAL (Nota los dos puntos .. para salir de la carpeta) -->
+  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="../assets/styles.css">
-  
 </head>
 <body>
 
-  <!-- ========= HEADER GLOBAL ========= -->
-    <header>
+  <!-- =========================================
+       1. HEADER (NAVEGACIÓN)
+       ========================================= -->
+  <header>
     <nav class="container nav">
-      <!-- LOGO: Siempre lleva al inicio del portal -->
       <a href="../index.html" class="logo">
         <span class="logo-badge">AI</span>
         <span class="logo-text">Aprendiendo Idiomas</span>
       </a>
 
       <div class="menu">
-        <!-- 1. VOLVER: Para cambiar de idioma -->
         <a href="../index.html" class="nav-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           Inicio
         </a>
-
-        <!-- 2. ANCLA: Baja directo a las lecciones -->
         <a href="#menu-lecciones" class="nav-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           Temario
         </a>
-
-        <!-- 3. YOUTUBE EXTERNO: Se abre en pestaña nueva -->
         <a href="https://www.youtube.com/@aprendiendoidiomas" target="_blank" class="nav-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
           YouTube
         </a>
-
-        <!-- 4. BOTÓN KO-FI (INTACTO) -->
         <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi'>
           <svg class="icon-kofi" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2a2 2 0 0 0 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
@@ -58,29 +51,31 @@
       </div>
     </nav>
   </header>
+
   <main class="container">
     
-    <!-- ========= HERO DEL CURSO ========= -->
-        <section class="hero">
+    <!-- =========================================
+         2. HERO (PORTADA)
+         ========================================= -->
+    <section class="hero">
       <span class="badge" data-lang="qvi" style="margin: 0 auto 1rem;">QVI</span>
       <h1 class="title">Curso de Kichwa Imbabura</h1>
       <p class="lead">Introducción al dialecto, gramática regular y consejos prácticos para empezar.</p>
       
-      <!-- BOTÓN DE INICIO RÁPIDO -->
+      <!-- CTA RÁPIDO (Botón Outline Redondeado) -->
       <div style="margin-top: 30px;">
-  <!-- Usamos dos clases: "cta" (forma base) y "cta-outline" (estilo visual) -->
-  <a href="leccion1.html" class="cta cta-outline">
-    Empezar Lección 1 &rarr;
-  </a>
-</div>
+        <a href="leccion1.html" class="cta cta-outline">
+          Empezar Lección 1 &rarr;
+        </a>
+      </div>
     </section>
 
-    <!-- ========= INTRODUCCIÓN ========= -->
+    <!-- =========================================
+         3. INTRODUCCIÓN ESCRITA
+         ========================================= -->
     <section id="introduccion">
-      <!-- Usamos una tarjeta grande para contener el texto y que se lea bien -->
       <div class="card" style="max-width: 900px; margin: 0 auto;">
         <h2>👋 Bienvenida e Introducción</h2>
-
         <p>Este sitio es el punto de partida para aprender el idioma <strong>Kichwa (Quichua)</strong> de Ecuador, con un enfoque claro y práctico en <strong>el dialecto de Imbabura</strong>, hablado en la parte norte del país (Otavalo y alrededores).</p>
 
         <div class="callout">
@@ -102,7 +97,59 @@
       </div>
     </section>
 
-    <!-- ========= QUÉ APRENDERÁS (GRID) ========= -->
+    <!-- =========================================
+         4. VIDEO (MOVIDO ARRIBA POR UX)
+         ========================================= -->
+    <!-- UX Tip: Es mejor que vean el video justo después de leer la intro, antes de ver el temario -->
+    <section id="video" style="margin-top: 40px; margin-bottom: 60px;">
+      <h2 style="text-align: center;">🎬 Video de la Lección</h2>
+      
+      <div class="card" style="padding: 0; overflow: hidden; max-width: 900px; margin: 0 auto;">
+        <div class="embed">
+          <iframe 
+            loading="lazy"
+            src="https://www.youtube-nocookie.com/embed/mcN2N7NOD6s" 
+            title="Introducción al curso de Kichwa" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-content">
+          <h3>Introducción al curso - Aprendiendo Idiomas</h3>
+          <p>Suscríbete al canal para más lecciones visuales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         5. RECURSOS EXTRA (TIPS)
+         ========================================= -->
+    <section id="tips">
+      <div class="card" style="max-width: 900px; margin: 0 auto;">
+        <h3>📌 Tips rápidos de estudio</h3>
+        
+        <details>
+          <summary>¿Cómo estudiar 10 minutos al día?</summary>
+          <ul>
+            <li>Escucha el video mientras vas en el bus o lavas platos.</li>
+            <li>Repite en voz alta las palabras (aunque suene raro al principio).</li>
+            <li>Usa notas adhesivas en tu casa con los nombres en Kichwa.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Glosario rápido de esta lección</summary>
+          <ul>
+            <li><strong>Raíz verbal:</strong> Parte del verbo que no cambia.</li>
+            <li><strong>Aglutinante:</strong> Idioma que pega palabras para crear significados.</li>
+            <li><strong>Mushuk Shimita Yachana:</strong> Aprender un nuevo idioma.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- =========================================
+         6. TEMARIO Y MAPA DEL CURSO
+         ========================================= -->
     <section id="que-aprenderas">
       <h2 style="text-align: center; margin-top: 60px;">Qué aprenderás en este curso</h2>
       <div class="grid">
@@ -125,14 +172,12 @@
       </div>
     </section>
 
-    <!-- ========= MENÚ DE LECCIONES ========= -->
     <section id="menu-lecciones">
       <h2 style="text-align: center; margin-top: 60px;">📚 Menú de Lecciones</h2>
       <p class="lead" style="text-align: center; margin-bottom: 30px;">Selecciona un tema para comenzar a estudiar.</p>
 
       <div class="grid">
-        <!-- Lección 1 -->
-        <!-- Nota: Cuando crees el archivo leccion1.html, cambia el href="#" -->
+        <!-- Enlaces futuros a lecciones -->
         <a href="#" class="card">
           <span class="badge" data-lang="qvi">01</span>
           <h3>Saludos y presentación</h3>
@@ -169,32 +214,29 @@
           <p>Diferencias entre el Kichwa de la sierra norte, centro y sur.</p>
         </a>
       </div>
-       <!-- BANNER DE PLAYLIST -->
+
+      <!-- Banner de Playlist -->
       <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" target="_blank" class="playlist-link">
         <div class="playlist-content">
-          <!-- Icono Play -->
           <svg class="icon-yt-small" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
           </svg>
-          
           <div class="playlist-info">
             <strong>Reproducir curso completo en YouTube</strong>
             <span>Mira las 20+ lecciones en orden automático</span>
           </div>
         </div>
-
-        <!-- Flechita -->
         <div class="playlist-arrow">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </div>
       </a>
     </section>
 
-        <!-- ========= DESCARGA DE MATERIAL (DISEÑO PREMIUM) ========= -->
-    <section id="material-descarga" style="margin: 40px 0;">
+    <!-- =========================================
+         7. DESCARGA (CIERRE DE CONTENIDO)
+         ========================================= -->
+    <section id="material-descarga">
       <div class="download-widget">
-        
-        <!-- Icono decorativo a la izquierda -->
         <div class="file-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -204,111 +246,61 @@
           </svg>
           <span class="file-type">PDF</span>
         </div>
-
-        <!-- Contenido de texto -->
         <div class="file-info">
           <span class="file-tag">Material de Apoyo</span>
           <h3>Resumen: Introducción al Kichwa</h3>
           <p>
-            Guía didáctica con los 4 pilares de esta lección: <strong>Contexto geográfico</strong> de Imbabura, la lógica de los <strong>verbos regulares</strong>, introducción al concepto de <strong>partículas</strong> y ejemplos de <strong>variaciones de pronunciación</strong> (alilla vs allilla).
+            Guía didáctica con los 4 pilares de esta lección: <strong>Contexto geográfico</strong> de Imbabura, la lógica de los <strong>verbos regulares</strong>, introducción al concepto de <strong>partículas</strong> y ejemplos de <strong>variaciones de pronunciación</strong>.
           </p>
-          
           <div class="file-meta">
             <span>💾 Archivo PDF</span>
             <span>•</span>
             <span>📄 Lectura rápida</span>
           </div>
         </div>
-
-        <!-- Botón de acción -->
         <div class="file-action">
-          <!-- NOTA: He convertido tu link de GitHub a "raw" para que se descargue directo, 
-               o idealmente usa la ruta relativa si el archivo está en tu carpeta del proyecto -->
           <a href="../assets/downloads/kichwa/Kichwa_Imbabura_Introduccion.pdf" class="btn-download" target="_blank" download>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             Descargar Gratis
           </a>
         </div>
-
       </div>
-            <!-- NAVEGACIÓN DEL CURSO -->
-      <div class="lesson-navigation">
-        
-        <!-- Botón Izquierdo (Deshabilitado en la intro) -->
-        <a href="#" class="nav-btn prev disabled">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          <div class="nav-label">
-            <small>Anterior</small>
-            <strong>--</strong>
-          </div>
-        </a>
-
-        <!-- Botón Derecho (Ir a Lección 1) -->
-        <!-- NOTA: Cuando crees leccion1.html, esto funcionará -->
-        <a href="leccion1.html" class="nav-btn next">
-          <div class="nav-label">
-            <small>Siguiente</small>
-            <strong>Lección 1: Saludos</strong>
-          </div>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
     </section>
-    
-    <!-- ========= VIDEO ========= -->
-    <section id="video" style="margin-bottom: 60px;">
-      <h2 style="text-align: center; margin-top: 60px;">🎬 Video de Introducción</h2>
-      
-      <!-- Usamos la clase "embed" de nuestro CSS para que sea responsive y bonito -->
-      <div class="card" style="padding: 0; overflow: hidden; max-width: 900px; margin: 0 auto;">
-        <div class="embed">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/mcN2N7NOD6s" 
-            title="Introducción al curso de Kichwa" 
-            allowfullscreen>
-          </iframe>
+
+    <!-- =========================================
+         8. NAVEGACIÓN (SIGUIENTE PASO)
+         ========================================= -->
+    <!-- Este es el final lógico: Si ya leyó y descargó, es hora de irse a la siguiente -->
+    <div class="lesson-navigation">
+      <!-- Anterior (Deshabilitado en Intro) -->
+      <a href="#" class="nav-btn prev disabled">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <div class="nav-label">
+          <small>Anterior</small>
+          <strong>--</strong>
         </div>
-        <div class="card-content">
-          <h3>Introducción al curso - Aprendiendo Idiomas</h3>
-          <p>Suscríbete al canal para más lecciones visuales.</p>
+      </a>
+
+      <!-- Siguiente (Lección 1) -->
+      <a href="leccion1.html" class="nav-btn next">
+        <div class="nav-label">
+          <small>Siguiente</small>
+          <strong>Lección 1: Saludos</strong>
         </div>
-      </div>
-    </section>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
 
-    <!-- ========= RECURSOS EXTRA (DETAILS) ========= -->
-    <section id="tips">
-      <div class="card" style="max-width: 900px; margin: 0 auto;">
-        <h3>📌 Tips rápidos de estudio</h3>
-        
-        <details>
-          <summary>¿Cómo estudiar 10 minutos al día?</summary>
-          <ul>
-            <li>Escucha el video mientras vas en el bus o lavas platos.</li>
-            <li>Repite en voz alta las palabras (aunque suene raro al principio).</li>
-            <li>Usa notas adhesivas en tu casa con los nombres en Kichwa.</li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>Glosario rápido de esta lección</summary>
-          <ul>
-            <li><strong>Raíz verbal:</strong> Parte del verbo que no cambia.</li>
-            <li><strong>Aglutinante:</strong> Idioma que pega palabras para crear significados.</li>
-            <li><strong>Mushuk Shimita Yachana:</strong> Aprender un nuevo idioma.</li>
-          </ul>
-        </details>
-      </div>
-    </section>
-
-        <!-- ========= DONACIONES (KO-FI) ========= -->
-    <section id="donaciones" class="donation-section" style="margin-top: 60px; margin-bottom: 40px;">
+    <!-- =========================================
+         9. DONACIONES
+         ========================================= -->
+    <section id="donaciones" class="donation-section">
       <div class="donation-card">
         <h2>☕ Apoya este proyecto educativo</h2>
         <p class="lead">
           Mantener este sitio y crear las lecciones toma mucho tiempo y esfuerzo. 
-          Tu donación ayuda a mantener el contenido 100% gratuito y libre de anuncios molestos.
+          Tu donación ayuda a mantener el contenido 100% gratuito.
         </p>
-        
         <div class="kofi-wrapper">
           <iframe 
             src='https://ko-fi.com/aprendiendoidiomas/?hidefeed=true&widget=true&embed=true' 
@@ -320,7 +312,9 @@
 
   </main>
 
-  <!-- ========= FOOTER GLOBAL ========= -->
+  <!-- =========================================
+       10. FOOTER
+       ========================================= -->
   <footer>
     <div class="container">
       <p>© 2026 Aprendiendo Idiomas · Curso de Kichwa Imbabura</p>
