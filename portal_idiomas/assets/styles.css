@@ -690,3 +690,65 @@ details ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); margin-t
   .download-widget::before { width: 100%; height: 4px; top: 0; left: 0; }
   .file-meta { justify-content: center; }
 }
+
+/* --- BANNER PLAYLIST YOUTUBE --- */
+.playlist-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #1f0505, var(--card));
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 30px; /* Separación de la grilla */
+  transition: all 0.3s ease;
+  group: playlist;
+}
+
+.playlist-link:hover {
+  border-color: #ff0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
+}
+
+.playlist-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-yt-small {
+  color: #ff0000;
+  width: 32px;
+  height: 32px;
+}
+
+.playlist-info strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.playlist-info span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.playlist-arrow {
+  color: var(--brand);
+  transition: transform 0.2s;
+}
+
+.playlist-link:hover .playlist-arrow {
+  transform: translateX(5px);
+  color: #ff0000;
+}
+
+/* Ajuste móvil */
+@media (max-width: 600px) {
+  .playlist-link { flex-direction: column; text-align: center; gap: 15px; }
+  .playlist-content { flex-direction: column; }
+  .playlist-arrow { transform: rotate(90deg); }
+  .playlist-link:hover .playlist-arrow { transform: rotate(90deg) translateY(5px); }
+}
