@@ -856,17 +856,43 @@ details ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); margin-t
   .nav-label strong { font-size: 0.9rem; }
 }
 
-/* Busca esto en tu CSS y asegúrate de que tenga estas líneas */
-.cta { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 8px; 
-  padding: 10px 25px;       /* Más espacio interno */
-  border-radius: 50px;      /* ESTO hace que sea redondo */
-  font-weight: 700; 
-  color: #fff; 
-  background: var(--brand); 
-  transition: all 0.2s; 
-  font-size: 0.95rem; 
-  text-decoration: none;    /* Quita el subrayado si lo tiene */
+/* --- BOTÓN CTA ESTÁNDAR (Base) --- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 30px;      /* Espacio interno cómodo */
+  border-radius: 50px;     /* ¡AQUÍ ESTÁ EL REDONDEADO! */
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 2px solid transparent; /* Preparamos el borde */
+  cursor: pointer;
+}
+
+/* --- VARIANTE 1: Sólido (El azul relleno) --- */
+.cta-primary {
+  background: var(--brand);
+  color: #0b0f14; /* Texto oscuro para contraste */
+}
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(111, 227, 255, 0.4);
+}
+
+/* --- VARIANTE 2: Outline (El transparente con borde) --- */
+/* ESTE ES EL QUE QUIERES USAR AHORA */
+.cta-outline {
+  background: transparent;
+  color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+.cta-outline:hover {
+  background: var(--brand); /* Al pasar el mouse se rellena */
+  color: #0b0f14;
+  box-shadow: 0 0 20px rgba(111, 227, 255, 0.3);
+  transform: translateY(-2px);
 }
