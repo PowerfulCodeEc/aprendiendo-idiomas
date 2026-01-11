@@ -516,6 +516,7 @@ footer {
 }
 
 .hobby-container {
+  /* Gradiente sutil y elegante para dark mode */
   background: linear-gradient(to right, var(--card), rgba(11, 15, 20, 0.5));
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -524,7 +525,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  /* Un brillo muy sutil de fondo */
   box-shadow: 0 0 40px rgba(0,0,0,0.1);
 }
 
@@ -556,7 +556,7 @@ footer {
   color: var(--text);
 }
 
-/* BOTÓN KO-FI DISCRETO Y ELEGANTE */
+/* --- BOTÓN KO-FI CON ANIMACIÓN --- */
 .btn-kofi-large {
   display: flex;
   align-items: center;
@@ -568,7 +568,7 @@ footer {
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(41, 171, 224, 0.2);
-  flex-shrink: 0; /* Que no se aplaste en móvil */
+  flex-shrink: 0; /* Evita que el botón se aplaste */
 }
 
 .btn-kofi-large:hover {
@@ -577,30 +577,41 @@ footer {
   box-shadow: 0 8px 25px rgba(41, 171, 224, 0.4);
 }
 
+/* Círculo contenedor del icono */
 .kofi-icon-box {
-  width: 32px; height: 32px;
-  background: rgba(255,255,255,0.2);
+  width: 34px; height: 34px;
+  background: rgba(255,255,255,0.15);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
 }
 
 .kofi-icon-box svg {
-  width: 18px; height: 18px;
-  animation: pulse-coffee 3s infinite;
+  width: 20px; height: 20px;
 }
 
+/* Animación del Humo (Steam) */
+.steam {
+  opacity: 0.8;
+  animation: steam-rise 2s infinite ease-in-out;
+  transform-origin: bottom;
+}
+.s1 { animation-delay: 0s; }
+.s2 { animation-delay: 0.5s; }
+.s3 { animation-delay: 1s; }
+
+@keyframes steam-rise {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-3px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.5; }
+}
+
+/* Textos del botón */
 .kofi-text {
   display: flex; flex-direction: column;
   line-height: 1;
 }
 .kofi-text small { font-size: 0.7rem; opacity: 0.9; }
 .kofi-text strong { font-size: 1.1rem; letter-spacing: 0.5px; }
-
-@keyframes pulse-coffee {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
 
 /* Ajuste Móvil: Columna */
 @media (max-width: 650px) {
@@ -609,10 +620,11 @@ footer {
   .btn-kofi-large { width: 100%; justify-content: center; }
 }
 
-/* Modo Claro Ajuste */
+/* Ajuste Modo Claro */
 @media (prefers-color-scheme: light) {
   .hobby-container {
     background: #ffffff;
     border-color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
 }
