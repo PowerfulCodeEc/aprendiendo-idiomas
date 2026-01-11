@@ -633,3 +633,121 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
 }
+
+/* =========================================
+   17. COOKIE CONSENT BANNER
+   ========================================= */
+
+.cookie-card {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 320px;
+  background: rgba(11, 15, 20, 0.85); /* Fondo semitransparente oscuro */
+  backdrop-filter: blur(12px);        /* Efecto de vidrio */
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  z-index: 9999;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  font-family: system-ui, -apple-system, sans-serif;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.cookie-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cookie-icon {
+  font-size: 1.5rem;
+  animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.cookie-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.cookie-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botón Aceptar (Marca) */
+.btn-cookie-primary {
+  flex: 1;
+  background: var(--brand);
+  color: #0b0f14;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn-cookie-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(111, 227, 255, 0.3);
+}
+
+/* Botón Rechazar (Sutil) */
+.btn-cookie-secondary {
+  flex: 1;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-cookie-secondary:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* Ajustes Modo Claro */
+@media (prefers-color-scheme: light) {
+  .cookie-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #e2e8f0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+  .btn-cookie-primary { color: #fff; }
+}
+
+/* Ajuste Móvil */
+@media (max-width: 480px) {
+  .cookie-card {
+    left: 20px;
+    right: 20px;
+    width: auto;
+    bottom: 20px;
+  }
+}
