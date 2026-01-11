@@ -18,15 +18,15 @@
 <meta name="twitter:description" content="Aprende Kichwa, Español e Inglés con videos, PDFs y ejercicios prácticos. Empieza gratis hoy y descarga materiales de cada lección.">
 <meta name="twitter:image" content="https://github.com/PowerfulCodeEc/aprendiendo-idiomas/blob/main/portal_idiomas/assets/img/portada-social.jpg?raw=true">
   
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0VJ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DV59EN0VJ3');
-</script>
+    <!-- Google tag (gtag.js) - INACTIVO POR DEFECTO -->
+  <!-- OJO: type="text/plain" evita que corra hasta tener permiso -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0VJ3" type="text/plain" data-type="analytics"></script>
+  <script type="text/plain" data-type="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DV59EN0VJ3');
+  </script>
 
   <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -271,5 +271,76 @@
       <p>© 2026 Aprendiendo Idiomas.</p>
     </div>
   </footer>
+    <!-- ========= COOKIE CONSENT BANNER ========= -->
+  <div id="cookie-banner" class="cookie-card" style="display: none;">
+    <div class="cookie-header">
+      <span class="cookie-icon">🍪</span>
+      <h3>Privacidad y Galletas</h3>
+    </div>
+    <p>
+      Usamos cookies para contar cuántas personas aprenden con nosotros. 
+      No guardamos datos personales. ¿Nos das permiso?
+    </p>
+    <div class="cookie-actions">
+      <button id="btn-deny" class="btn-cookie-secondary">Solo necesarias</button>
+      <button id="btn-accept" class="btn-cookie-primary">¡Claro, acepto!</button>
+    </div>
+  </div>
+
+  <!-- LÓGICA DE COOKIES (JAVASCRIPT) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("btn-accept");
+      const denyBtn = document.getElementById("btn-deny");
+
+      // 1. Revisar si ya decidió antes
+      if (!localStorage.getItem("cookieConsent")) {
+        // Si no hay decisión, mostrar banner con una pequeña animación de entrada
+        setTimeout(() => {
+          banner.style.display = "block";
+          banner.classList.add("fade-in-up");
+        }, 1000); // Espera 1 seg para no asustar al usuario nada más entrar
+      } else if (localStorage.getItem("cookieConsent") === "accepted") {
+        loadAnalytics();
+      }
+
+      // 2. Función para encender Analytics
+      function loadAnalytics() {
+        // Selecciona los scripts que pusimos como text/plain
+        const analyticsScripts = document.querySelectorAll('script[data-type="analytics"]');
+        
+        analyticsScripts.forEach(script => {
+          // Crea un nuevo script activo
+          const newScript = document.createElement('script');
+          newScript.type = 'text/javascript'; // Ahora sí es JS real
+          
+          if (script.src) {
+            newScript.src = script.src;
+            newScript.async = true;
+          } else {
+            newScript.innerHTML = script.innerHTML;
+          }
+          
+          document.head.appendChild(newScript);
+        });
+        console.log("Google Analytics cargado 🚀");
+      }
+
+      // 3. Botón Aceptar
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+        loadAnalytics();
+      });
+
+      // 4. Botón Rechazar
+      denyBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieConsent", "denied");
+        banner.style.display = "none";
+        // No cargamos nada, cumpliendo la ley GDPR
+      });
+    });
+  </script>
 </body>
 </html>
