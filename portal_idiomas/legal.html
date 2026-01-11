@@ -3,23 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aviso Legal y Privacidad | Aprendiendo Idiomas</title>
-  <meta name="robots" content="noindex"> <!-- No queremos que Google indexe esto como contenido educativo -->
+  <title>Términos Legales y Privacidad | Aprendiendo Idiomas</title>
+  <meta name="robots" content="noindex"> 
+  
+  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="assets/styles.css">
+  
+  <!-- Estilos específicos para lectura legal -->
   <style>
-    /* Estilos simples para texto legal */
-    .legal-content { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    .legal-content h1 { text-align: center; margin-bottom: 40px; }
-    .legal-content h2 { margin-top: 30px; font-size: 1.5rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-    .legal-content h3 { font-size: 1.1rem; color: var(--brand); margin-top: 20px; }
-    .legal-content p, .legal-content ul { color: var(--muted); font-size: 0.95rem; text-align: justify; }
-    .legal-content ul { padding-left: 20px; }
-    .legal-content li { margin-bottom: 5px; }
+    .legal-content { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+    .legal-content h1 { text-align: center; margin-bottom: 10px; font-size: 2rem; }
+    .legal-content .date { display: block; text-align: center; color: var(--muted); margin-bottom: 50px; font-size: 0.9rem; }
+    
+    .legal-section { margin-bottom: 50px; }
+    .legal-section h2 { 
+      font-size: 1.5rem; color: var(--text); border-bottom: 1px solid var(--border); 
+      padding-bottom: 15px; margin-bottom: 20px; 
+    }
+    .legal-section h3 { font-size: 1.1rem; color: var(--brand); margin-top: 30px; margin-bottom: 10px; }
+    
+    .legal-content p, .legal-content li { color: var(--muted); font-size: 0.95rem; line-height: 1.7; text-align: justify; }
+    .legal-content ul { padding-left: 20px; margin-bottom: 20px; }
+    .legal-content li { margin-bottom: 8px; }
+    
+    /* Caja de Licencia */
+    .license-box {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px; margin: 20px 0;
+    }
+    
+    /* Botón para resetear cookies */
+    .btn-reset-cookies {
+      background: transparent; border: 1px solid var(--red); color: var(--red);
+      padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 10px;
+    }
+    .btn-reset-cookies:hover { background: rgba(255, 77, 77, 0.1); }
   </style>
 </head>
 <body>
 
-  <!-- HEADER SIMPLE (Solo volver) -->
+  <!-- HEADER -->
   <header>
     <nav class="container nav">
       <a href="index.html" class="logo">
@@ -34,68 +57,88 @@
 
   <main class="legal-content">
     <h1>Términos Legales y Privacidad</h1>
-    <p>Última actualización: Marzo 2024</p>
+    <span class="date">Última actualización: Marzo 2026</span>
 
     <!-- 1. AVISO LEGAL -->
-    <section>
+    <section class="legal-section">
       <h2>1. Aviso Legal</h2>
-      <p>
-        En cumplimiento con el deber de información, se informa que este sitio web es un proyecto personal sin fines de lucro comercial directo, dedicado a la divulgación educativa de idiomas.
-      </p>
+      <p>Este sitio web es un proyecto personal sin fines de lucro comercial directo, dedicado a la divulgación educativa de idiomas.</p>
+      
       <ul>
-        <li><strong>Responsable del proyecto:</strong> "Equipo Aprendiendo Idiomas"</li>
-        <li><strong>Contacto:</strong> A través de mensajes directos en nuestro <a href="https://www.youtube.com/@aprendiendoidiomas" target="_blank">Canal de YouTube</a>.</li>
-        <li><strong>Finalidad:</strong> Educación gratuita y divulgación cultural.</li>
+        <li><strong>Responsable del tratamiento:</strong> Equipo Aprendiendo Idiomas.</li>
+        <li><strong>Contacto de privacidad:</strong> Puedes contactarnos a través de los comentarios en nuestro <a href="https://www.youtube.com/@aprendiendoidiomas" target="_blank">Canal de YouTube</a> o mediante la plataforma Ko-fi.</li>
+        <li><strong>Finalidad del sitio:</strong> Educación gratuita y divulgación cultural.</li>
+        <li><strong>Alojamiento:</strong> Sitio estático alojado en GitHub Pages. El proveedor puede generar registros técnicos (logs) para seguridad y operación.</li>
       </ul>
+
+      <p>Los contenidos se publican con fines informativos y educativos. Aunque procuramos exactitud, podrían contener errores; el uso es bajo tu responsabilidad. Enlaces externos llevan a sitios de terceros cuyos contenidos y prácticas no controlamos.</p>
+
+      <div class="license-box">
+        <h3>Propiedad Intelectual y Licencias</h3>
+        <p><strong>© 2026 Aprendiendo Idiomas. Todos los derechos reservados.</strong></p>
+        <ul>
+          <li><strong>Código del sitio (HTML/CSS/JS):</strong> Licencia MIT.</li>
+          <li><strong>Contenido educativo (textos, lecciones):</strong> <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Atribución-NoComercial 4.0 (CC BY-NC 4.0)</a>.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- 2. POLÍTICA DE PRIVACIDAD -->
-    <section>
+    <!-- 2. PRIVACIDAD -->
+    <section class="legal-section">
       <h2>2. Política de Privacidad</h2>
-      <p>
-        Nos tomamos tu privacidad en serio. Este sitio web <strong>no cuenta con registro de usuarios</strong>, por lo que no almacenamos nombres, direcciones ni contraseñas en bases de datos propias.
-      </p>
-      
-      <h3>Google Analytics</h3>
-      <p>
-        Utilizamos Google Analytics 4 para entender cómo se usa nuestro sitio (qué lecciones se visitan más, desde qué países, etc.). Esta herramienta recopila tu dirección IP de forma anónima. Hemos configurado el sitio para que <strong>no se cargue ninguna cookie de rastreo hasta que tú des tu consentimiento explícito</strong> en el banner inicial.
-      </p>
+      <p>Este sitio no ofrece registro de usuarios ni formularios, por lo que <strong>no almacenamos nombres, direcciones, contraseñas ni correos electrónicos</strong> en bases de datos propias.</p>
+
+      <h3>Datos que podemos tratar</h3>
+      <ul>
+        <li><strong>Información de uso:</strong> Páginas vistas, tiempo en página, país aproximado (mediante herramientas analíticas solo con tu consentimiento).</li>
+        <li><strong>Registros técnicos:</strong> Logs del servidor generados automáticamente por GitHub Pages para seguridad.</li>
+      </ul>
+
+      <h3>Google Analytics 4 (GA4)</h3>
+      <p>Utilizamos GA4 para comprender qué lecciones son más útiles. GA4 no almacena direcciones IP; las utiliza transitoriamente para aproximar la ubicación y luego las descarta. <strong>Hemos configurado el sitio para que no se cargue ninguna cookie analítica hasta que otorgues consentimiento explícito.</strong></p>
+      <ul>
+        <li><strong>Base legal:</strong> Consentimiento (art. 6.1.a GDPR).</li>
+        <li><strong>Retención de eventos:</strong> 2 meses.</li>
+        <li><strong>Transferencias internacionales:</strong> Google puede tratar datos fuera del EEE bajo cláusulas contractuales tipo (SCC).</li>
+      </ul>
 
       <h3>Donaciones (Ko-fi)</h3>
-      <p>
-        Si decides apoyarnos económicamente, la transacción se realiza íntegramente en la plataforma de terceros <strong>Ko-fi</strong>. Nosotros no tenemos acceso a tus datos bancarios ni tarjetas de crédito. Ko-fi gestiona la transacción y su propia política de privacidad aplica en ese momento.
-      </p>
+      <p>Si decides apoyarnos, la transacción ocurre en <strong>Ko-fi</strong>. No tenemos acceso a tus datos bancarios. Recibimos únicamente la información necesaria para registrar la donación (importe, fecha y mensaje opcional). Aplica la política de privacidad de Ko-fi.</p>
     </section>
 
-    <!-- 3. POLÍTICA DE COOKIES -->
-    <section>
+    <!-- 3. COOKIES -->
+    <section class="legal-section">
       <h2>3. Política de Cookies</h2>
-      <p>
-        Una cookie es un pequeño archivo de texto que se guarda en tu navegador. Usamos las siguientes:
-      </p>
+      <p>Una cookie es un pequeño archivo de texto que se guarda en tu navegador. Usamos:</p>
       <ul>
-        <li><strong>Técnicas (Necesarias):</strong> Para recordar si has aceptado o rechazado el aviso de cookies (así no te lo mostramos cada vez que entras).</li>
-        <li><strong>Analíticas (Opcionales):</strong> Google Analytics (_ga). Nos ayudan a contar visitas. Solo se activan si haces clic en "¡Claro, acepto!".</li>
+        <li><strong>Técnicas (Necesarias):</strong> Para recordar si aceptaste o rechazaste el aviso de cookies. Base legal: interés legítimo.</li>
+        <li><strong>Analíticas (Opcionales):</strong> Google Analytics 4 (<code>_ga</code>, <code>_ga_ID</code>). Nos ayudan a contar visitas. Solo se activan si haces clic en “Sí, aceptar”.</li>
       </ul>
-      <p>
-        Puedes eliminar estas cookies en cualquier momento desde la configuración de tu navegador (Chrome, Firefox, Edge, etc.).
-      </p>
+
+      <h3>Cómo controlar las cookies</h3>
+      <p>Puedes eliminar cookies desde la configuración de tu navegador (Chrome, Firefox, Edge, etc.) en cualquier momento.</p>
+      
+      <!-- BOTÓN FUNCIONAL DE REVOCACIÓN -->
+      <div style="background: var(--bg); padding: 15px; border-radius: 8px; margin-top: 15px; border: 1px dashed var(--border);">
+        <p style="margin: 0 0 10px 0; font-size: 0.9rem;">¿Quieres cambiar tu decisión sobre las cookies?</p>
+        <button id="reset-consent" class="btn-reset-cookies">Revocar consentimiento y volver a configurar</button>
+      </div>
     </section>
 
-        <!-- 4. TUS DERECHOS -->
-    <section>
-      <h2>4. Tus Derechos (GDPR)</h2>
-      <p>
-        Aunque no almacenamos datos personales directos (como tu nombre o email), la normativa europea te otorga derechos sobre tu huella digital. Tienes derecho a:
-      </p>
-      <ul>
-        <li>Solicitar que no se rastree tu navegación (ya lo puedes hacer rechazando las cookies en el banner).</li>
-        <li>Saber qué herramientas utilizamos (detallado en esta página).</li>
-        <li>Navegar de forma segura mediante protocolo HTTPS.</li>
-      </ul>
-      <p>
-        Al ser un sitio web estático sin base de datos de usuarios, no poseemos información que podamos "rectificar" o "portar", ya que no la guardamos en primer lugar.
-      </p>
+    <!-- 4. DERECHOS -->
+    <section class="legal-section">
+      <h2>4. Tus Derechos</h2>
+      <p>Conforme al GDPR (UE) y la normativa aplicable (ej. Ley Orgánica de Protección de Datos Personales de Ecuador), tienes derecho a acceso, rectificación, supresión, oposición y a retirar tu consentimiento.</p>
+      
+      <p>Para ejercerlos, contáctanos a través de nuestro canal de YouTube. Si consideras vulnerados tus derechos, puedes reclamar ante la autoridad de protección de datos de tu país.</p>
+      
+      <p><strong>Menores de edad:</strong> El sitio no está diseñado para recabar datos de menores. Las donaciones deben realizarse por adultos.</p>
+    </section>
+
+    <!-- 5. CAMBIOS -->
+    <section class="legal-section">
+      <h2>5. Cambios en esta Política</h2>
+      <p>Podemos actualizar estos términos para reflejar mejoras. Cuando el cambio sea significativo, lo indicaremos en el sitio.</p>
     </section>
 
   </main>
@@ -105,6 +148,18 @@
       <p>© 2026 Aprendiendo Idiomas.</p>
     </div>
   </footer>
+
+  <!-- Script para el botón de revocar cookies -->
+  <script>
+    document.getElementById('reset-consent').addEventListener('click', function() {
+      // 1. Borrar la memoria de la decisión
+      localStorage.removeItem('cookieConsent');
+      // 2. Avisar al usuario
+      alert('Configuración borrada. La próxima vez que visites una página, verás el banner de nuevo.');
+      // 3. Opcional: Recargar para ver el banner ya (descomenta si quieres)
+      // location.reload();
+    });
+  </script>
 
 </body>
 </html>
