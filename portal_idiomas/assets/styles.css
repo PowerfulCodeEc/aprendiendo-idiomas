@@ -751,3 +751,48 @@ width: auto;
 bottom: 20px;
 }
 }
+/* =========================================
+   PARCHES PARA ARREGLAR MÓVIL (CORRECCIONES)
+   ========================================= */
+
+/* 1. ARREGLO DEL KO-FI (Sección 12) */
+.kofi-wrapper {
+  /* Cambiamos width fijo por un ancho fluido con tope */
+  width: 100%; 
+  max-width: 500px; 
+  /* Aseguramos que no se desborde */
+  box-sizing: border-box;
+}
+
+/* 2. ARREGLO DE LA GRILLA BENTO (Sección 13) */
+.learn-grid {
+  /* Bajamos de 300px a 260px para que quepa en celulares pequeños */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* 3. ARREGLO DEL WIDGET DE DESCARGA (Sección 11) */
+@media (max-width: 600px) {
+  .file-info {
+    /* Quitamos el ancho mínimo que forzaba el estiramiento */
+    min-width: 0; 
+    width: 100%;
+  }
+}
+
+/* 4. ARREGLO DE COOKIES (Sección 17) */
+@media (max-width: 480px) {
+  .cookie-card {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    /* Quitamos el ancho fijo de 320px */
+    width: auto; 
+    max-width: none;
+  }
+}
+
+/* 5. SEGURIDAD GLOBAL PARA EVITAR SCROLL HORIZONTAL */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
