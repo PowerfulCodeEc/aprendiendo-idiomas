@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lección 1: Saludos y Fonética | Kichwa Imbabura</title>
+    <meta name="description" content="Aprende los saludos básicos (Alli puncha), despedidas y las reglas de oro de la pronunciación en Kichwa de Imbabura." />
+    
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <!-- ESTILOS ESPECÍFICOS PARA ESTA LECCIÓN -->
+    <style>
+        /* --- 1. Estilo para sílaba tónica (Acentuación) --- */
+        .stress-word { font-family: monospace; font-size: 1.1rem; letter-spacing: 1px; color: var(--muted); }
+        .stress-syllable { color: var(--brand); font-weight: 800; text-transform: uppercase; border-bottom: 2px solid var(--brand); }
+
+        /* --- 2. Estilo tipo Chat para diálogos --- */
+        .chat-container { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; }
+        .chat-bubble {
+            padding: 15px 20px; border-radius: 20px; max-width: 80%; width: fit-content; position: relative;
+            font-size: 1rem; line-height: 1.4;
+        }
+        .chat-left {
+            background: var(--card); border: 1px solid var(--border); border-bottom-left-radius: 4px;
+            align-self: flex-start; margin-right: auto;
+        }
+        .chat-right {
+            background: rgba(111, 227, 255, 0.15); border: 1px solid rgba(111, 227, 255, 0.3); color: var(--text);
+            border-bottom-right-radius: 4px; align-self: flex-end; margin-left: auto; text-align: right;
+        }
+        .chat-label { font-size: 0.75rem; display: block; margin-bottom: 4px; opacity: 0.7; font-weight: 700; text-transform: uppercase; }
+        .chat-phonetic { display: block; font-family: monospace; color: var(--brand); font-size: 0.85rem; margin-top: 4px; font-weight: 600; }
+
+        /* --- 3. Flashcards (Repaso) --- */
+        .flashcard summary { list-style: none; padding: 15px; background: var(--card); border: 1px dashed var(--border); border-radius: 8px; cursor: pointer; text-align: center; font-weight: 600; transition: all 0.2s; }
+        .flashcard summary:hover { border-color: var(--brand); color: var(--brand); }
+        .flashcard[open] summary { border-bottom: 1px solid var(--border); border-bottom-left-radius: 0; border-bottom-right-radius: 0; background: var(--hover); }
+        .flashcard ul { margin: 0; padding: 15px; background: var(--hover); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; list-style: none; }
+
+        /* --- 4. Tarjetas Duales (Escritura vs Fonética) --- */
+        .term-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+            padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center;
+            transition: transform 0.2s;
+        }
+        .term-card:hover { transform: translateY(-3px); border-color: var(--brand); }
+        .term-unified { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 5px; }
+        .term-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; display: block; }
+        .term-phonetic {
+            font-family: monospace; font-size: 1.1rem; color: var(--brand);
+            background: rgba(111, 227, 255, 0.1); padding: 5px 12px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .term-meaning {
+            margin-top: 15px; font-style: italic; color: var(--muted);
+            border-top: 1px dashed var(--border); padding-top: 10px; width: 100%;
+        }
+        
+        /* Ajuste para lista de despedidas con fonética */
+        .list-phonetic { color: var(--brand); font-family: monospace; font-weight: bold; margin-left: 8px; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="container nav">
+            <a href="../index.html" class="logo">
+                <span class="logo-badge">AI</span>
+                <span class="logo-text">Aprendiendo Idiomas</span>
+            </a>
+            <div class="menu">
+                <a href="index.html" class="nav-link">&larr; Volver al Índice</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="course-layout">
+            
+            <!-- CONTENIDO LECCIÓN -->
+            <div class="course-content">
+                
+                <!-- 1. HERO -->
+                <section class="hero" style="text-align: left; padding-bottom: 20px;">
+                    <span class="badge" data-lang="qvi" style="width: auto; padding: 0 15px; display: inline-flex;">LECCIÓN 1</span>
+                    <h1 class="title" style="margin: 0;">Saludos y Fonética Básica</h1>
+                    <p class="lead" style="margin: 10px 0 0;">Las reglas de oro de la pronunciación y tus primeras palabras en Kichwa.</p>
+                </section>
+
+                <!-- 2. VIDEO DESTACADO -->
+                <section class="card-media" style="border-radius: 16px; margin-bottom: 40px;">
+                    <div class="embed">
+                        <!-- Video ID actualizado y lista de reproducción incluida -->
+                        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Ua290T-e48Q?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" title="Lección 1 Kichwa" allowfullscreen></iframe>
+                    </div>
+                </section>
+
+                <!-- 3. INTRODUCCIÓN Y CONTEXTO -->
+                <section>
+                    <div class="callout">
+                        <strong>🌍 Sobre los dialectos:</strong> En Ecuador existen variantes (Chimborazo, Tena, Imbabura). Este curso se basa en el <strong>Kichwa de Imbabura</strong> (Norte). Si escuchas diferencias, no te preocupes, ¡es la riqueza del idioma!
+                    </div>
+                </section>
+
+                <!-- 4. FONÉTICA: VOCALES Y CONSONANTES -->
+                <section style="margin-top: 40px;">
+                    <h2>1. Reglas de Oro (Fonética)</h2>
+                    <p>Antes de hablar, necesitamos entender cómo suena el idioma original.</p>
+                    <div class="grid" style="margin-top: 20px; gap: 20px;">
+                        <!-- Regla Vocales -->
+                        <div class="card">
+                            <div class="learn-icon icon-blue">🔤</div>
+                            <h3>Las 3 Vocales</h3>
+                            <p>El Kichwa original usa solo: <strong>a, i, u</strong>.</p>
+                            <p style="font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; color: var(--muted);">
+                                <em>¿Y la E y la O?</em> Solo aparecen en préstamos del español (ej. <em>escribina</em>, <em>Eduardo</em>). Si las escuchas, seguro es una palabra adaptada.
+                            </p>
+                        </div>
+                        <!-- Regla Consonantes -->
+                        <div class="card">
+                            <div class="learn-icon icon-purple">🗣️</div>
+                            <h3>Sonidos Clave</h3>
+                            <ul style="padding-left: 20px; margin: 0; color: var(--muted);">
+                                <li style="margin-bottom: 8px;"><strong>SH:</strong> Suena como pidiendo silencio (/shhh/).</li>
+                                <li><strong>Z:</strong> Vibrante, como un zumbido suave (/zzz/).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. SALUDOS (VOCABULARIO DUAL) -->
+                <section style="margin-top: 50px;">
+                    <!-- Ajuste: Se eliminó "Napaykuna" -->
+                    <h2>2. Los Saludos</h2>
+                    <p>Aquí tienes la escritura estándar (Unificada) y abajo, en azul, cómo lo pronunciamos en Imbabura (Fonética).</p>
+                    
+                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        
+                        <!-- Tarjeta 1: Buenos días -->
+                        <div class="term-card">
+                            <span class="term-label">Escritura Unificada</span>
+                            <div class="term-unified">Alli puncha</div>
+                            <div class="term-phonetic">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                [ali punlla]
+                            </div>
+                            <div class="term-meaning">Buenos días</div>
+                        </div>
+                
+                        <!-- Tarjeta 2: Buenas tardes -->
+                        <div class="term-card">
+                            <span class="term-label">Escritura Unificada</span>
+                            <div class="term-unified">Alli chishi</div>
+                            <div class="term-phonetic">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                [ali chishi]
+                            </div>
+                            <div class="term-meaning">Buenas tardes (Recuerda: sh = shhh)</div>
+                        </div>
+                
+                        <!-- Tarjeta 3: Buenas noches -->
+                        <div class="term-card">
+                            <span class="term-label">Escritura Unificada</span>
+                            <div class="term-unified">Alli tuta</div>
+                            <div class="term-phonetic">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                [ali tu-ta]
+                            </div>
+                            <div class="term-meaning">Buenas noches</div>
+                        </div>
+                
+                    </div>
+                </section>
+
+                <!-- 6. LA REGLA DEL ACENTO (VISUAL) -->
+                <section style="margin-top: 50px; background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border);">
+                    <h3 style="color: var(--brand);">📌 El secreto del acento</h3>
+                    <p>Casi todas las palabras en Kichwa son <strong>GRAVES</strong>. La fuerza de voz va en la <strong>penúltima sílaba</strong>.</p>
+                    
+                    <div style="background: var(--bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                        <p style="margin-bottom: 5px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Ejemplo: "Hasta mañana"</p>
+                        <div class="stress-word" style="font-size: 1.5rem;">
+                            ka - ya - <span class="stress-syllable">KA</span> - man
+                            <br>
+                            <span style="font-size: 0.8rem; color: var(--brand);">[cayacaman]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. DESPEDIDAS -->
+                <section style="margin-top: 50px;">
+                    <h2>3. Despedidas</h2>
+                    <p>Practica la regla del acento grave en estas frases. Observa la fonética:</p>
+                    <ul class="lesson-list" style="font-size: 1.1rem; gap: 15px;">
+                        <li class="lesson-item" style="display: block;">
+                            <strong>Kayakaman</strong> <span class="list-phonetic">[cayacaman]</span> <br>
+                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta mañana</span>
+                        </li>
+                        <li class="lesson-item" style="display: block;">
+                            <strong>Shuk punchakaman</strong> <span class="list-phonetic">[shuj punllacaman]</span> <br>
+                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta otro día</span>
+                        </li>
+                        <li class="lesson-item" style="display: block;">
+                            <strong>Tuparishun</strong> <span class="list-phonetic">[Tuparishun]</span> <br>
+                            <span style="color: var(--muted); font-size: 0.9rem;">Nos vemos</span>
+                        </li>
+                        <li class="lesson-item" style="display: block;">
+                            <strong>Ashta kashkaman</strong> <span class="list-phonetic">[ashta cashcaman]</span> <br>
+                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta luego</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 8. CONVERSACIÓN (CHAT UI) -->
+                <section style="margin-top: 60px;">
+                    <h2>4. Conversación: ¿Cómo estás?</h2>
+                    <p>Imagina un encuentro en la calle. ¿Cómo preguntas y respondes?</p>
+
+                    <div class="chat-container">
+                        <!-- Pregunta Informal -->
+                        <div class="chat-bubble chat-left">
+                            <span class="chat-label">Amigo (Informal)</span>
+                            <strong>Imanalla?</strong>
+                            <span class="chat-phonetic">[imanalla]</span>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo estás?)</span>
+                        </div>
+
+                         <!-- Pregunta Formal -->
+                         <div class="chat-bubble chat-left">
+                            <span class="chat-label">Mayor (Formal/Respeto)</span>
+                            <strong>Imanallata kapanki?</strong>
+                            <span class="chat-phonetic">[imanallata capangui]</span>
+                            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo está usted?)</span>
+                        </div>
+
+                        <!-- Respuesta Positiva -->
+                        <div class="chat-bubble chat-right">
+                            <span class="chat-label">Tú: Bien nomás</span>
+                            <strong>Allilla</strong>
+                            <span class="chat-phonetic">[alilla]</span>
+                        </div>
+
+                        <!-- Respuesta Regular -->
+                        <div class="chat-bubble chat-right">
+                            <span class="chat-label">Tú: Más o menos</span>
+                            <strong>Shinashinalla</strong>
+                            <span class="chat-phonetic">[Shinashinalla]</span>
+                        </div>
+
+                         <!-- Respuesta Negativa -->
+                         <div class="chat-bubble chat-right">
+                            <span class="chat-label">Tú: No estoy bien</span>
+                            <strong>Mana allichu kani</strong>
+                            <span class="chat-phonetic">[Mana alichu cani]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. FLASHCARDS (INTERACTIVO) -->
+                <section style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
+                    <h3 style="text-align: center; margin-bottom: 20px;">🧠 Repaso Rápido</h3>
+                    <div class="grid" style="margin: 0; gap: 15px;">
+                        
+                        <details class="flashcard">
+                            <summary>¿Cómo se dice "Buenos días"?</summary>
+                            <ul>Alli puncha [ali punlla]</ul>
+                        </details>
+
+                        <details class="flashcard">
+                            <summary>¿Cómo se dice "Hasta mañana"?</summary>
+                            <ul>Kayakaman [cayacaman]</ul>
+                        </details>
+
+                        <details class="flashcard">
+                            <summary>¿Respuesta a "Imanallata kapanki"?</summary>
+                            <ul>Allilla [alilla]</ul>
+                        </details>
+
+                        <details class="flashcard">
+                            <summary>¿Cómo se dice "No estoy bien"?</summary>
+                            <ul>Mana allichu kani [Mana alichu cani]</ul>
+                        </details>
+
+                    </div>
+                </section>
+
+                <!-- 10. DESCARGA PDF -->
+                <section id="material-descarga">
+                    <div class="download-widget">
+                        <div class="file-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <path d="M12 18v-6"></path><path d="M9 15l3 3 3-3"></path>
+                            </svg>
+                            <span class="file-type">PDF</span>
+                        </div>
+                        <div class="file-info">
+                            <span class="file-tag">Material de la Lección 1</span>
+                            <h3>Hoja de trabajo: Saludos y Reglas</h3>
+                            <p>Descarga la lista completa de vocabulario y ejercicios de pronunciación.</p>
+                            <div class="file-meta">
+                                <span>💾 Archivo PDF</span>
+                            </div>
+                        </div>
+                        <div class="file-action">
+                            <a href="../assets/downloads/kichwa/Leccion1_Saludos.pdf" class="btn-download" target="_blank" download>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NAVEGACIÓN -->
+                <div class="lesson-navigation">
+                    <a href="index.html" class="nav-btn prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <div class="nav-label">
+                            <small>Volver a</small>
+                            <strong>Introducción</strong>
+                        </div>
+                    </a>
+                    <!-- Botón "Siguiente" desactivado hasta que exista Lección 2 -->
+                    <a href="#" class="nav-btn next disabled">
+                        <div class="nav-label">
+                            <small>Siguiente</small>
+                            <strong>Lección 2: (Pronto)</strong>
+                        </div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- SECCIÓN HOBBY -->
+                <section id="apoyo-hobby" class="hobby-section">
+                    <div class="hobby-container">
+                        <div class="hobby-info">
+                            <div class="hobby-badge">👨‍💻 PROYECTO PERSONAL</div>
+                            <p>
+                                Este portal es un hobby que desarrollo en mis tiempos libres. 
+                                <strong>El contenido siempre será gratuito.</strong> Si te ha sido útil, invítame un café. ☕
+                            </p>
+                        </div>
+                        <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi-large'>
+                            <span class="kofi-icon-box">
+                                <svg class="steam-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                    <line class="steam s1" x1="6" y1="1" x2="6" y2="4"></line>
+                                    <line class="steam s2" x1="10" y1="1" x2="10" y2="4"></line>
+                                    <line class="steam s3" x1="14" y1="1" x2="14" y2="4"></line>
+                                </svg>
+                            </span>
+                            <div class="kofi-text">
+                                <small>Support me on</small>
+                                <strong>Ko-fi</strong>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+            </div> <!-- FIN COURSE CONTENT -->
+
+            <!-- SIDEBAR -->
+            <aside class="course-sidebar">
+                <div class="sidebar-title">
+                    PROGRESO
+                    <span style="font-size: 0.7rem; background: var(--brand); color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold;">15%</span>
+                </div>
+
+                <nav class="lesson-list">
+                    <a href="index.html" class="lesson-item">
+                        <div class="status-icon" style="background: var(--brand); border-color: var(--brand);"></div> <!-- Ya visto -->
+                        <span>Introducción</span>
+                    </a>
+                    <a href="leccion1.html" class="lesson-item active">
+                        <div class="status-icon"></div>
+                        <span>01. Saludos y Fonética</span>
+                    </a>
+                    <a href="#" class="lesson-item">
+                        <div class="status-icon"></div>
+                        <span>02. Pronunciación II</span>
+                    </a>
+                    <a href="#" class="lesson-item">
+                        <div class="status-icon"></div>
+                        <span>03. Verbos Regulares</span>
+                    </a>
+                </nav>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 Aprendiendo Idiomas. 
+                <span style="opacity: 0.3; margin: 0 10px;">|</span> 
+                <a href="../legal.html" style="text-decoration: underline;">Privacidad y Legal</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS GLOBAL -->
+    <script src="../assets/scripts.js"></script>
+
+</body>
+</html>
