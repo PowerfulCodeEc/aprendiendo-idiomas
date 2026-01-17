@@ -1,351 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aprendiendo Idiomas | Portal</title>
-  <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
-  <!-- Open Graph / Facebook / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://powerfulcodeec.github.io/aprendiendo-idiomas/">
-<meta property="og:title" content="Aprendiendo Idiomas | Kichwa, Español e Inglés gratis">
-<meta property="og:description" content="Aprende Kichwa, Español e Inglés con videos, PDFs y ejercicios prácticos. Empieza gratis hoy y descarga materiales de cada lección.">
-<meta property="og:image" content="https://github.com/PowerfulCodeEc/aprendiendo-idiomas/blob/main/portal_idiomas/assets/img/portada-social.jpg?raw=true">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aprendiendo Idiomas | Portal</title>
+    <meta name="description" content="Portal para aprender Kichwa, Español e Inglés con videos, material imprimible y ejercicios." />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powerfulcodeec.github.io/aprendiendo-idiomas/">
+    <meta property="og:title" content="Aprendiendo Idiomas | Kichwa, Español e Inglés gratis">
+    <meta property="og:description" content="Aprende Kichwa, Español e Inglés con videos, PDFs y ejercicios prácticos.">
+    <meta property="og:image" content="https://github.com/PowerfulCodeEc/aprendiendo-idiomas/blob/main/portal_idiomas/assets/img/portada-social.jpg?raw=true">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aprendiendo Idiomas">
+    <meta name="twitter:description" content="Aprende Kichwa, Español e Inglés con videos, PDFs y ejercicios prácticos.">
+    <meta name="twitter:image" content="https://github.com/PowerfulCodeEc/aprendiendo-idiomas/blob/main/portal_idiomas/assets/img/portada-social.jpg?raw=true">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aprendiendo Idiomas">
-<meta name="twitter:description" content="Aprende Kichwa, Español e Inglés con videos, PDFs y ejercicios prácticos. Empieza gratis hoy y descarga materiales de cada lección.">
-<meta name="twitter:image" content="https://github.com/PowerfulCodeEc/aprendiendo-idiomas/blob/main/portal_idiomas/assets/img/portada-social.jpg?raw=true">
-  
-    <!-- Google tag (gtag.js) - INACTIVO POR DEFECTO -->
-  <!-- OJO: type="text/plain" evita que corra hasta tener permiso -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV59EN0VJ3" type="text/plain" data-type="analytics"></script>
-  <script type="text/plain" data-type="analytics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DV59EN0VJ3');
-  </script>
-
-  <link rel="stylesheet" href="assets/styles.css">
+    <!-- CSS GLOBAL (Vinculado externamente) -->
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
-<header>
-    <nav class="container nav">
-      <!-- Logo que recarga la página o va al inicio -->
-      <a href="#" class="logo">
-        <span class="logo-badge">AI</span>
-        <span class="logo-text">Aprendiendo Idiomas</span>
-      </a>
-
-      <div class="menu">
-        <!-- 1. CURSOS (Icono Libro) -->
-        <a href="#cursos" class="nav-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-          </svg>
-          Cursos
-        </a>
-
-        <!-- 2. RECURSOS (Icono Carpeta) -->
-        <a href="#recursos" class="nav-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;">
-            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-          </svg>
-          Recursos
-        </a>
-
-        <!-- 3. YOUTUBE (Icono Play) -->
-        <a href="#youtube" class="nav-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom;">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-          </svg>
-          YouTube
-        </a>
-
-        <!-- 4. APÓYANOS (Botón Ko-fi) -->
-        <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi'>
-          <svg class="icon-kofi" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2a2 2 0 0 0 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
-          </svg>
-          Apóyanos
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <h1 class="title">Aprende Kichwa [Quichua], Español e Inglés</h1>
-      <p class="lead">Tu portal educativo gratuito con videos, material imprimible en PDF y ejercicios prácticos.</p>
-    </section>
-
-    <section id="cursos">
-      <div class="grid">
-        <a href="./kichwa/index.html" class="card">
-          <span class="badge" data-lang="qvi">QVI</span>
-          <h3>Kichwa [Quichua] Imbabura</h3>
-          <p>Curso práctico respetando la variante de Imbabura. Desde cero.</p>
-        </a>
-
-        <a href="./espanol/index.html" class="card">
-          <span class="badge" data-lang="es">ES</span>
-          <h3>Español Latino</h3>
-          <p>Para principiantes. Incluye gramática y ejercicios de lectura.</p>
-        </a>
-
-       <!-- TARJETA ESPECIAL: INGLÉS (Colaboración) -->
-<div class="card card-special">
-  <!-- Área principal: Enlace al curso -->
-  <a href="./ingles/index.html" class="card-main-link">
-    <div class="card-header">
-      <span class="badge" data-lang="en">EN</span>
-      <span class="tag-collab">✨ Colaboración</span>
-    </div>
-    <h3>Inglés con Minecraft</h3>
-    <p>Aprende vocabulario explorando mundos.</p>
-  </a>
-
-  <!-- Área inferior: Créditos al amigo -->
-  <div class="card-footer-collab">
-    <div class="collab-info">
-      <span>Creado por:</span>
-      <strong>@idimiusic</strong>
-    </div>
-    <a href="https://www.youtube.com/@idimiusic?sub_confirmation=1" target="_blank" class="btn-friend">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
-      Suscribirse
-    </a>
-  </div>
-</div>
-      </div>
-    </section>
-
-    <section id="recursos">
-      <h2>Recursos de aprendizaje</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>🎬 Videos Explicativos</h3>
-          <p>Clases integradas desde YouTube con subtítulos y explicaciones claras.</p>
-        </div>
-        <div class="card">
-          <h3>🖨️ PDFs Imprimibles</h3>
-          <p>Descarga guías rápidas, hojas de trabajo y tarjetas de vocabulario.</p>
-        </div>
-        <div class="card">
-          <h3>🧩 Ejercicios Interactivos</h3>
-          <p>Cuestionarios al final de cada lección para medir tu progreso.</p>
-        </div>
-      </div>
-    </section>
-    <section id="youtube">
-      <div class="yt-hero">
-        <!-- Fondo decorativo abstracto -->
-        <div class="yt-bg-pattern"></div>
-        
-        <div class="yt-content">
-          <div class="yt-header">
-            <div class="yt-logo-wrapper">
-              <svg class="yt-icon-logo" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-              </svg>
-            </div>
-            <div>
-              <h2 class="yt-title">Canal Oficial</h2>
-              <span class="yt-subtitle">@aprendiendoidiomas</span>
-            </div>
-          </div>
-
-          <p class="yt-desc">
-            Accede a nuestra videoteca completa. Clases gratuitas, pronunciación y ejercicios paso a paso. 
-            <strong>¡Suscríbete y activa la campanita! 🔔</strong>
-          </p>
-          
-          <div class="yt-actions">
-            <a href="https://www.youtube.com/@aprendiendoidiomas?sub_confirmation=1" class="btn-yt-primary" target="_blank">
-              Suscribirse
+    
+    <!-- =========================================
+         HEADER Y NAVEGACIÓN
+         ========================================= -->
+    <header>
+        <nav class="container nav">
+            <!-- Logo (recarga la página) -->
+            <a href="#" class="logo">
+                <span class="logo-badge">AI</span>
+                <span class="logo-text">Aprendiendo Idiomas</span>
             </a>
-            <a href="https://www.youtube.com/@aprendiendoidiomas/playlists" class="btn-yt-secondary" target="_blank">
-              Ver todas las Listas
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="grid">
-        
-        <!-- 1. Tarjeta Kichwa -->
-        <div class="card card-media">
-          <div class="embed">
-            <!-- loading="lazy" ayuda a que la página cargue más rápido -->
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" title="Kichwa Playlist" allowfullscreen></iframe>
-          </div>
-          <div class="card-content">
-            <div class="card-text">
-              <h3>Kichwa Imbabura</h3>
-              <p>Curso completo de gramática y vocabulario.</p>
+            <div class="menu">
+                <!-- 1. CURSOS -->
+                <a href="#cursos" class="nav-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    Cursos
+                </a>
+
+                <!-- 2. RECURSOS -->
+                <a href="#recursos" class="nav-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Recursos
+                </a>
+
+                <!-- 3. YOUTUBE -->
+                <a href="#youtube" class="nav-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                    YouTube
+                </a>
+
+                <!-- 4. APÓYANOS -->
+                <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi'>
+                    <svg class="icon-kofi" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2a2 2 0 0 0 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+                    </svg>
+                    Apóyanos
+                </a>
             </div>
-            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" target="_blank" class="btn-media-link">
-              Ver en YouTube &rarr;
-            </a>
-          </div>
-        </div>
+        </nav>
+    </header>
 
-        <!-- 2. Tarjeta Español -->
-        <div class="card card-media">
-          <div class="embed">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" title="Español Playlist" allowfullscreen></iframe>
-          </div>
-          <div class="card-content">
-            <div class="card-text">
-              <h3>Español Latino</h3>
-              <p>Lecciones básicas y lectura comprensiva.</p>
-            </div>
-            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" target="_blank" class="btn-media-link">
-              Ver en YouTube &rarr;
-            </a>
-          </div>
-        </div>
-        
-        <!-- 3. Tarjeta Inglés -->
-        <div class="card card-media">
-          <div class="embed">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" title="Inglés Playlist" allowfullscreen></iframe>
-          </div>
-          <div class="card-content">
-            <div class="card-text">
-              <h3>Inglés</h3>
-              <p>Aprende jugando con Minecraft.</p>
-            </div>
-            <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" target="_blank" class="btn-media-link">
-              Ver en YouTube &rarr;
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
+    <main class="container">
+        <!-- =========================================
+             HERO PRINCIPAL
+             ========================================= -->
+        <section class="hero">
+            <h1 class="title">Aprende Kichwa [Quichua], Español e Inglés</h1>
+            <p class="lead">Tu portal educativo gratuito con videos, material imprimible en PDF y ejercicios prácticos.</p>
+        </section>
 
         <!-- =========================================
-         9. SECCIÓN HOBBY (Apoyo Discreto)
+             SECCIÓN CURSOS
+             ========================================= -->
+        <section id="cursos">
+            <div class="grid">
+                <!-- Kichwa -->
+                <a href="./kichwa/index.html" class="card">
+                    <span class="badge" data-lang="qvi">QVI</span>
+                    <h3>Kichwa [Quichua] Imbabura</h3>
+                    <p>Curso práctico respetando la variante de Imbabura. Desde cero.</p>
+                </a>
+
+                <!-- Español -->
+                <a href="./espanol/index.html" class="card">
+                    <span class="badge" data-lang="es">ES</span>
+                    <h3>Español Latino</h3>
+                    <p>Para principiantes. Incluye gramática y ejercicios de lectura.</p>
+                </a>
+
+                <!-- Inglés (Colaboración) -->
+                <div class="card card-special">
+                    <a href="./ingles/index.html" class="card-main-link">
+                        <div class="card-header">
+                            <span class="badge" data-lang="en">EN</span>
+                            <span class="tag-collab">✨ Colaboración</span>
+                        </div>
+                        <h3>Inglés con Minecraft</h3>
+                        <p>Aprende vocabulario explorando mundos.</p>
+                    </a>
+                    <div class="card-footer-collab">
+                        <div class="collab-info">
+                            <span>Creado por:</span>
+                            <strong>@idimiusic</strong>
+                        </div>
+                        <a href="https://www.youtube.com/@idimiusic?sub_confirmation=1" target="_blank" class="btn-friend">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Suscribirse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECCIÓN RECURSOS
+             ========================================= -->
+        <section id="recursos">
+            <h2>Recursos de aprendizaje</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🎬 Videos Explicativos</h3>
+                    <p>Clases integradas desde YouTube con subtítulos y explicaciones claras.</p>
+                </div>
+                <div class="card">
+                    <h3>🖨️ PDFs Imprimibles</h3>
+                    <p>Descarga guías rápidas, hojas de trabajo y tarjetas de vocabulario.</p>
+                </div>
+                <div class="card">
+                    <h3>🧩 Ejercicios Interactivos</h3>
+                    <p>Cuestionarios al final de cada lección para medir tu progreso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECCIÓN YOUTUBE
+             ========================================= -->
+        <section id="youtube">
+            <div class="yt-hero">
+                <div class="yt-bg-pattern"></div>
+                <div class="yt-content">
+                    <div class="yt-header">
+                        <div class="yt-logo-wrapper">
+                            <svg class="yt-icon-logo" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="yt-title">Canal Oficial</h2>
+                            <span class="yt-subtitle">@aprendiendoidiomas</span>
+                        </div>
+                    </div>
+
+                    <p class="yt-desc">
+                        Accede a nuestra videoteca completa. Clases gratuitas, pronunciación y ejercicios paso a paso. 
+                        <strong>¡Suscríbete y activa la campanita! 🔔</strong>
+                    </p>
+                    
+                    <div class="yt-actions">
+                        <a href="https://www.youtube.com/@aprendiendoidiomas?sub_confirmation=1" class="btn-yt-primary" target="_blank">
+                            Suscribirse
+                        </a>
+                        <a href="https://www.youtube.com/@aprendiendoidiomas/playlists" class="btn-yt-secondary" target="_blank">
+                            Ver todas las Listas
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <!-- 1. Kichwa -->
+                <div class="card card-media">
+                    <div class="embed">
+                        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" title="Kichwa Playlist" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>Kichwa Imbabura</h3>
+                            <p>Curso completo de gramática y vocabulario.</p>
+                        </div>
+                        <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCNrxoaXl3NzkB8cnmUvRRct" target="_blank" class="btn-media-link">
+                            Ver en YouTube &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Español -->
+                <div class="card card-media">
+                    <div class="embed">
+                        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" title="Español Playlist" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>Español Latino</h3>
+                            <p>Lecciones básicas y lectura comprensiva.</p>
+                        </div>
+                        <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCO9ROnHmhDPkqIhhA2HpMZ0" target="_blank" class="btn-media-link">
+                            Ver en YouTube &rarr;
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3. Inglés -->
+                <div class="card card-media">
+                    <div class="embed">
+                        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" title="Inglés Playlist" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>Inglés</h3>
+                            <p>Aprende jugando con Minecraft.</p>
+                        </div>
+                        <a href="https://www.youtube.com/playlist?list=PLQm6D1IUAGCMBMeEhdw20VWmiuODBL_k5" target="_blank" class="btn-media-link">
+                            Ver en YouTube &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECCIÓN HOBBY (Apoyo Discreto)
+             ========================================= -->
+        <section id="apoyo-hobby" class="hobby-section">
+            <div class="hobby-container">
+                <!-- Texto -->
+                <div class="hobby-info">
+                    <div class="hobby-badge">👨‍💻 PROYECTO PERSONAL</div>
+                    <p>
+                        Este portal es un hobby que desarrollo en mis tiempos libres. 
+                        <strong>El contenido siempre será gratuito.</strong> Si te ha sido útil y quieres motivarme a seguir, puedes invitarme un café virtual. ☕
+                    </p>
+                </div>
+
+                <!-- Botón Ko-fi -->
+                <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi-large'>
+                    <span class="kofi-icon-box">
+                        <!-- Icono Taza Minimalista -->
+                        <svg class="steam-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                            <!-- Humo animado -->
+                            <line class="steam s1" x1="6" y1="1" x2="6" y2="4"></line>
+                            <line class="steam s2" x1="10" y1="1" x2="10" y2="4"></line>
+                            <line class="steam s3" x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                    </span>
+                    <div class="kofi-text">
+                        <small>Support me on</small>
+                        <strong>Ko-fi</strong>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
          ========================================= -->
-    <section id="apoyo-hobby" class="hobby-section">
-      <div class="hobby-container">
-        
-        <!-- Texto sincero -->
-        <div class="hobby-info">
-          <div class="hobby-badge">👨‍💻 PROYECTO PERSONAL</div>
-          <p>
-            Este portal es un hobby que desarrollo en mis tiempos libres. 
-            <strong>El contenido siempre será gratuito.</strong> Si te ha sido útil y quieres motivarme a seguir con este proyecto, puedes invitarme un café virtual. ☕
-          </p>
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 Aprendiendo Idiomas. 
+                <span style="opacity: 0.3; margin: 0 10px;">|</span> 
+                <a href="legal.html" style="text-decoration: underline;">Privacidad y Legal</a>
+            </p>
         </div>
+    </footer>
 
-                <!-- Botón Ko-fi Clean & Animado -->
-        <a href='https://ko-fi.com/G2G01K9Y8S' target='_blank' class='btn-kofi-large'>
-          <span class="kofi-icon-box">
-            <!-- Icono Taza Minimalista -->
-            <svg class="steam-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-              <!-- Las líneas del humo tienen clases para animarlas -->
-              <line class="steam s1" x1="6" y1="1" x2="6" y2="4"></line>
-              <line class="steam s2" x1="10" y1="1" x2="10" y2="4"></line>
-              <line class="steam s3" x1="14" y1="1" x2="14" y2="4"></line>
-            </svg>
-          </span>
-          <div class="kofi-text">
-            <small>Support me on</small>
-            <strong>Ko-fi</strong>
-          </div>
-        </a>
-
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        © 2026 Aprendiendo Idiomas. 
-        <!-- Separador sutil -->
-        <span style="opacity: 0.3; margin: 0 10px;">|</span> 
-        <a href="legal.html" style="text-decoration: underline;">Privacidad y Legal</a>
-      </p>
+    <!-- =========================================
+         BANNER DE COOKIES
+         ========================================= -->
+    <div id="cookie-banner" class="cookie-card" style="display: none;">
+        <div class="cookie-header">
+            <span class="cookie-icon">🍪</span>
+            <h3>Uso de Cookies</h3>
+        </div>
+        <p>
+            Utilizamos cookies para analizar las visitas de forma anónima y mejorar el contenido. ¿Nos das tu permiso?
+        </p>
+        <div class="cookie-actions">
+            <button id="btn-deny" class="btn-cookie-secondary">No, gracias</button>
+            <button id="btn-accept" class="btn-cookie-primary">¡Claro, acepto!</button>
+        </div>
     </div>
-  </footer>
-    <!-- ========= COOKIE CONSENT BANNER ========= -->
-  <div id="cookie-banner" class="cookie-card" style="display: none;">
-    <div class="cookie-header">
-      <span class="cookie-icon">🍪</span>
-      <h3>Uso de Cookies</h3>
-    </div>
-    <p>
-      Utilizamos cookies para analizar las visitas de forma anónima y mejorar el contenido. 
-      ¿Nos das tu permiso?
-    </p>
-    <div class="cookie-actions">
-      <button id="btn-deny" class="btn-cookie-secondary">No, gracias</button>
-      <button id="btn-accept" class="btn-cookie-primary">¡Claro, acepto!</button>
-    </div>
-  </div>
 
-  <!-- LÓGICA DE COOKIES (JAVASCRIPT) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const banner = document.getElementById("cookie-banner");
-      const acceptBtn = document.getElementById("btn-accept");
-      const denyBtn = document.getElementById("btn-deny");
+    <!-- SCRIPT GLOBAL (Carga la lógica de cookies y analíticas) -->
+    <script src="assets/scripts.js"></script>
 
-      // 1. Revisar si ya decidió antes
-      if (!localStorage.getItem("cookieConsent")) {
-        // Si no hay decisión, mostrar banner con una pequeña animación de entrada
-        setTimeout(() => {
-          banner.style.display = "block";
-          banner.classList.add("fade-in-up");
-        }, 1000); // Espera 1 seg para no asustar al usuario nada más entrar
-      } else if (localStorage.getItem("cookieConsent") === "accepted") {
-        loadAnalytics();
-      }
-
-      // 2. Función para encender Analytics
-      function loadAnalytics() {
-        // Selecciona los scripts que pusimos como text/plain
-        const analyticsScripts = document.querySelectorAll('script[data-type="analytics"]');
-        
-        analyticsScripts.forEach(script => {
-          // Crea un nuevo script activo
-          const newScript = document.createElement('script');
-          newScript.type = 'text/javascript'; // Ahora sí es JS real
-          
-          if (script.src) {
-            newScript.src = script.src;
-            newScript.async = true;
-          } else {
-            newScript.innerHTML = script.innerHTML;
-          }
-          
-          document.head.appendChild(newScript);
-        });
-        console.log("Google Analytics cargado 🚀");
-      }
-
-      // 3. Botón Aceptar
-      acceptBtn.addEventListener("click", () => {
-        localStorage.setItem("cookieConsent", "accepted");
-        banner.style.display = "none";
-        loadAnalytics();
-      });
-
-      // 4. Botón Rechazar
-      denyBtn.addEventListener("click", () => {
-        localStorage.setItem("cookieConsent", "denied");
-        banner.style.display = "none";
-        // No cargamos nada, cumpliendo la ley GDPR
-      });
-    });
-  </script>
 </body>
 </html>
