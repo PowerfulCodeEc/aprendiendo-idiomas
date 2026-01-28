@@ -162,49 +162,49 @@
                     </div>
                 </section>
 
-                <!-- 5. SALUDOS (VOCABULARIO DUAL) -->
-                <section style="margin-top: 50px;">
-                    <!-- Ajuste: Se eliminó "Napaykuna" -->
-                    <h2>2. Los Saludos</h2>
-                    <p>Aquí tienes la escritura estándar (Unificada) y abajo, en azul, cómo lo pronunciamos en Imbabura (Fonética).</p>
-                    
-                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                        
-                        <!-- Tarjeta 1: Buenos días -->
-                        <div class="term-card">
-                            <span class="term-label">Escritura Unificada</span>
-                            <div class="term-unified">Alli puncha</div>
-                            <div class="term-phonetic">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
-                                [ali punlla]
-                            </div>
-                            <div class="term-meaning">Buenos días</div>
-                        </div>
-                
-                        <!-- Tarjeta 2: Buenas tardes -->
-                        <div class="term-card">
-                            <span class="term-label">Escritura Unificada</span>
-                            <div class="term-unified">Alli chishi</div>
-                            <div class="term-phonetic">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
-                                [ali chishi]
-                            </div>
-                            <div class="term-meaning">Buenas tardes (Recuerda: sh = shhh)</div>
-                        </div>
-                
-                        <!-- Tarjeta 3: Buenas noches -->
-                        <div class="term-card">
-                            <span class="term-label">Escritura Unificada</span>
-                            <div class="term-unified">Alli tuta</div>
-                            <div class="term-phonetic">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
-                                [ali tu-ta]
-                            </div>
-                            <div class="term-meaning">Buenas noches</div>
-                        </div>
-                
-                    </div>
-                </section>
+                <!-- 5. SALUDOS (CLICKABLE) -->
+<section style="margin-top: 50px;">
+    <h2>2. Los Saludos</h2>
+    <p>Haz <strong>clic en las tarjetas</strong> para escuchar la pronunciación nativa. 🔊</p>
+    
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <!-- Tarjeta 1 -->
+        <div class="term-card" onclick="playAudio('alli-puncha.mp3')">
+            <span class="term-label">Escritura Unificada</span>
+            <div class="term-unified">Alli puncha</div>
+            <div class="term-phonetic">
+                <!-- Icono Parlante -->
+                <svg class="icon-speaker" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                [ali punlla]
+            </div>
+            <div class="term-meaning">Buenos días</div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="term-card" onclick="playAudio('alli-chishi.mp3')">
+            <span class="term-label">Escritura Unificada</span>
+            <div class="term-unified">Alli chishi</div>
+            <div class="term-phonetic">
+                <svg class="icon-speaker" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                [ali chishi]
+            </div>
+            <div class="term-meaning">Buenas tardes</div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="term-card" onclick="playAudio('alli-tuta.mp3')">
+            <span class="term-label">Escritura Unificada</span>
+            <div class="term-unified">Alli tuta</div>
+            <div class="term-phonetic">
+                <svg class="icon-speaker" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                [ali tu-ta]
+            </div>
+            <div class="term-meaning">Buenas noches</div>
+        </div>
+
+    </div>
+</section>
 
                 <!-- 6. LA REGLA DEL ACENTO (VISUAL) -->
                 <section style="margin-top: 50px; background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border);">
