@@ -11,6 +11,20 @@
 
     <!-- ESTILOS ESPECÍFICOS PARA ESTA LECCIÓN -->
     <style>
+        /* Efecto para tarjetas con audio */
+.term-card {
+    cursor: pointer; /* Manito al pasar el mouse */
+    position: relative;
+}
+.term-card:active {
+    transform: scale(0.98); /* Efecto de presión al hacer clic */
+    background: var(--hover);
+}
+/* Icono de parlante animado al hacer hover */
+.term-card:hover .icon-speaker {
+    color: var(--brand);
+    transform: scale(1.1);
+}
         /* --- 1. Estilo para sílaba tónica (Acentuación) --- */
         .stress-word { font-family: monospace; font-size: 1.1rem; letter-spacing: 1px; color: var(--muted); }
         .stress-syllable { color: var(--brand); font-weight: 800; text-transform: uppercase; border-bottom: 2px solid var(--brand); }
