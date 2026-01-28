@@ -423,6 +423,20 @@
 
     <!-- JS GLOBAL -->
     <script src="../assets/scripts.js"></script>
+    <!-- SCRIPT DE AUDIO -->
+<script>
+    function playAudio(filename) {
+        // Ruta donde guardaste los archivos
+        const path = '../assets/audio/kichwa/leccion1/'; 
+        const audio = new Audio(path + filename);
+        
+        // Reproducir
+        audio.play().catch(error => {
+            console.log("Error al reproducir: " + error);
+            alert("No se encontró el audio: " + filename);
+        });
+    }
+</script>
 
 </body>
 </html>
