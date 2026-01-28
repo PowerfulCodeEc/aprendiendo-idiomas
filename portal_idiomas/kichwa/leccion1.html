@@ -198,7 +198,7 @@
             <div class="term-unified">Alli tuta</div>
             <div class="term-phonetic">
                 <svg class="icon-speaker" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                [ali tu-ta]
+                [ali tuta]
             </div>
             <div class="term-meaning">Buenas noches</div>
         </div>
@@ -222,73 +222,97 @@
                 </section>
 
                 <!-- 7. DESPEDIDAS -->
-                <section style="margin-top: 50px;">
-                    <h2>3. Despedidas</h2>
-                    <p>Practica la regla del acento grave en estas frases. Observa la fonética:</p>
-                    <ul class="lesson-list" style="font-size: 1.1rem; gap: 15px;">
-                        <li class="lesson-item" style="display: block;">
-                            <strong>Kayakaman</strong> <span class="list-phonetic">[cayacaman]</span> <br>
-                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta mañana</span>
-                        </li>
-                        <li class="lesson-item" style="display: block;">
-                            <strong>Shuk punchakaman</strong> <span class="list-phonetic">[shuj punllacaman]</span> <br>
-                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta otro día</span>
-                        </li>
-                        <li class="lesson-item" style="display: block;">
-                            <strong>Tuparishun</strong> <span class="list-phonetic">[Tuparishun]</span> <br>
-                            <span style="color: var(--muted); font-size: 0.9rem;">Nos vemos</span>
-                        </li>
-                        <li class="lesson-item" style="display: block;">
-                            <strong>Ashta kashkaman</strong> <span class="list-phonetic">[ashta cashcaman]</span> <br>
-                            <span style="color: var(--muted); font-size: 0.9rem;">Hasta luego</span>
-                        </li>
-                    </ul>
-                </section>
+<section style="margin-top: 50px;">
+    <h2>3. Despedidas</h2>
+    <p>Haz clic en las frases para escuchar:</p>
+    <ul class="lesson-list" style="font-size: 1.1rem; gap: 15px;">
+        
+        <li class="lesson-item" style="cursor: pointer;" onclick="playAudio('kayakaman.mp3')">
+            <div style="display:flex; justify-content: space-between; width:100%; align-items: center;">
+                <div>
+                    <strong>Kayakaman</strong> <span class="list-phonetic">[cayacaman]</span>
+                    <br><span style="color: var(--muted); font-size: 0.9rem;">Hasta mañana</span>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </li>
 
-                <!-- 8. CONVERSACIÓN (CHAT UI) -->
-                <section style="margin-top: 60px;">
-                    <h2>4. Conversación: ¿Cómo estás?</h2>
-                    <p>Imagina un encuentro en la calle. ¿Cómo preguntas y respondes?</p>
+        <li class="lesson-item" style="cursor: pointer;" onclick="playAudio('shuk-punchakaman.mp3')">
+            <div style="display:flex; justify-content: space-between; width:100%; align-items: center;">
+                <div>
+                    <strong>Shuk punchakaman</strong> <span class="list-phonetic">[shuj punllacaman]</span>
+                    <br><span style="color: var(--muted); font-size: 0.9rem;">Hasta otro día</span>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </li>
 
-                    <div class="chat-container">
-                        <!-- Pregunta Informal -->
-                        <div class="chat-bubble chat-left">
-                            <span class="chat-label">Amigo (Informal)</span>
-                            <strong>Imanalla?</strong>
-                            <span class="chat-phonetic">[imanalla]</span>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo estás?)</span>
-                        </div>
+        <li class="lesson-item" style="cursor: pointer;" onclick="playAudio('tuparishun.mp3')">
+            <div style="display:flex; justify-content: space-between; width:100%; align-items: center;">
+                <div>
+                    <strong>Tuparishun</strong> <span class="list-phonetic">[Tuparishun]</span>
+                    <br><span style="color: var(--muted); font-size: 0.9rem;">Nos vemos</span>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </li>
 
-                         <!-- Pregunta Formal -->
-                         <div class="chat-bubble chat-left">
-                            <span class="chat-label">Mayor (Formal/Respeto)</span>
-                            <strong>Imanallata kapanki?</strong>
-                            <span class="chat-phonetic">[imanallata capangui]</span>
-                            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo está usted?)</span>
-                        </div>
+        <li class="lesson-item" style="cursor: pointer;" onclick="playAudio('ashta-kashkaman.mp3')">
+            <div style="display:flex; justify-content: space-between; width:100%; align-items: center;">
+                <div>
+                    <strong>Ashta kashkaman</strong> <span class="list-phonetic">[ashta cashcaman]</span>
+                    <br><span style="color: var(--muted); font-size: 0.9rem;">Hasta luego</span>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </li>
+    </ul>
+</section>
 
-                        <!-- Respuesta Positiva -->
-                        <div class="chat-bubble chat-right">
-                            <span class="chat-label">Tú: Bien nomás</span>
-                            <strong>Allilla</strong>
-                            <span class="chat-phonetic">[alilla]</span>
-                        </div>
+                <!-- 8. CONVERSACIÓN -->
+<section style="margin-top: 60px;">
+    <h2>4. Conversación: ¿Cómo estás?</h2>
+    <p>Haz clic en los mensajes para escuchar la entonación.</p>
 
-                        <!-- Respuesta Regular -->
-                        <div class="chat-bubble chat-right">
-                            <span class="chat-label">Tú: Más o menos</span>
-                            <strong>Shinashinalla</strong>
-                            <span class="chat-phonetic">[Shinashinalla]</span>
-                        </div>
+    <div class="chat-container">
+        <!-- Pregunta Informal -->
+        <div class="chat-bubble chat-left" style="cursor: pointer;" onclick="playAudio('imanalla.mp3')">
+            <span class="chat-label">Amigo (Informal) 🔊</span>
+            <strong>Imanalla?</strong>
+            <span class="chat-phonetic">[imanalla]</span>
+            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo estás?)</span>
+        </div>
 
-                         <!-- Respuesta Negativa -->
-                         <div class="chat-bubble chat-right">
-                            <span class="chat-label">Tú: No estoy bien</span>
-                            <strong>Mana allichu kani</strong>
-                            <span class="chat-phonetic">[Mana alichu cani]</span>
-                        </div>
-                    </div>
-                </section>
+            <!-- Pregunta Formal -->
+            <div class="chat-bubble chat-left" style="cursor: pointer;" onclick="playAudio('imanallata-kapanki.mp3')">
+            <span class="chat-label">Mayor (Formal) 🔊</span>
+            <strong>Imanallata kapanki?</strong>
+            <span class="chat-phonetic">[imanallata capangui]</span>
+            <span style="font-size: 0.85rem; opacity: 0.8;">(¿Cómo está usted?)</span>
+        </div>
+
+        <!-- Respuesta Positiva -->
+        <div class="chat-bubble chat-right" style="cursor: pointer;" onclick="playAudio('allilla.mp3')">
+            <span class="chat-label">Tú: Bien nomás 🔊</span>
+            <strong>Allilla</strong>
+            <span class="chat-phonetic">[alilla]</span>
+        </div>
+
+        <!-- Respuesta Regular -->
+        <div class="chat-bubble chat-right" style="cursor: pointer;" onclick="playAudio('shinashinalla.mp3')">
+            <span class="chat-label">Tú: Más o menos 🔊</span>
+            <strong>Shinashinalla</strong>
+            <span class="chat-phonetic">[Shinashinalla]</span>
+        </div>
+
+            <!-- Respuesta Negativa -->
+            <div class="chat-bubble chat-right" style="cursor: pointer;" onclick="playAudio('mana-allichu-kani.mp3')">
+            <span class="chat-label">Tú: No estoy bien 🔊</span>
+            <strong>Mana allichu kani</strong>
+            <span class="chat-phonetic">[Mana alichu cani]</span>
+        </div>
+    </div>
+</section>
 
                 <!-- 9. FLASHCARDS (INTERACTIVO) -->
                 <section style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
