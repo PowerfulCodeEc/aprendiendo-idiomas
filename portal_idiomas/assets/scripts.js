@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const acceptBtn = document.getElementById("btn-accept");
     const denyBtn = document.getElementById("btn-deny");
     const resetBtn = document.getElementById("reset-consent");
+   // Actualizar año automáticamente
+document.getElementById("year").textContent = new Date().getFullYear();
 
     // 1. Lógica del Banner de Cookies (si existe en la página)
     if (banner) {
